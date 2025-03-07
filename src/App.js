@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'; // Import App.css
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Import images
 import githubIcon from './Assests/github.png';
