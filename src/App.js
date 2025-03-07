@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className="portfolio-container">
+      <SpeedInsights />
       {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-content">
@@ -206,6 +207,7 @@ costs and enhancing transparency.</p>
         </div>
       </footer>
     </div>
+    
   );
 }
 
