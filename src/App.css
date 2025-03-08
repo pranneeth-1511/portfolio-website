@@ -336,13 +336,11 @@
 }
 
 /* Media Queries for Responsiveness */
-
 /* Mobile Devices (up to 767px) */
 @media (max-width: 767px) {
   .navbar-toggle {
     display: block;
   }
-
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -355,90 +353,151 @@
     border-radius: 5px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
-
   .navbar-links.open {
     display: flex;
   }
-
   .navbar-link {
     margin: 0;
     color: #1f2937;
     background-color: transparent;
     border: none;
   }
-
   .hero-title {
     font-size: 2rem;
   }
-
   .hero-subtitle {
     font-size: 1rem;
   }
-
   .section-title {
     font-size: 1.5rem;
   }
-
   .section-description {
     font-size: 0.9rem;
   }
-
   .skills-list {
     justify-content: center;
   }
-
   .contact-buttons {
     gap: 10px; /* Reduced gap for mobile */
     justify-content: flex-start; /* Align buttons to the start */
   }
-
   .contact-button {
     padding: 8px 16px; /* Reduced padding for smaller screens */
     font-size: 0.9rem; /* Slightly smaller font size */
   }
-
   .contact-icon {
     width: 20px; /* Slightly smaller icons */
     height: 20px;
   }
-
   .education-item-header {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .education-item-icon {
     margin-bottom: 10px;
   }
 }
-
 /* Tablet Devices (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-content {
     padding: 0 10px;
   }
-
   .hero-title {
     font-size: 2.5rem;
   }
-
   .hero-subtitle {
     font-size: 1.1rem;
   }
-
   .section-title {
     font-size: 1.75rem;
   }
-
   .section-description {
     font-size: 0.95rem;
   }
-
   .skills-list {
     justify-content: flex-start;
   }
-
   .contact-buttons {
-    gap: 15px; /* Adjusted gap for tablets */
+    gap: 15px;
+  }
+}
+
+/* Achievements and Participation Section */
+.achievements-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+}
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.achievement-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.achievement-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.achievement-item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+.achievement-item-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .achievement-item {
+    max-width: 100%;
+  }
+  .achievement-item-title {
+    font-size: 1.3rem;
+  }
+  .achievement-item-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .achievement-item {
+    padding: 20px;
+  }
+  .achievement-item-title {
+    font-size: 1.2rem;
+  }
+  .achievement-item-description {
+    font-size: 0.9rem;
   }
 }

@@ -33,12 +33,11 @@ function App() {
             <a href="#education" className="navbar-link" onClick={toggleNav}>Education</a>
             <a href="#skills" className="navbar-link" onClick={toggleNav}>Skills</a>
             <a href="#projects" className="navbar-link" onClick={toggleNav}>Projects</a>
+            <a href="#achievements" className='navbar-link' onClick={toggleNav}>Achievement</a>
             <a href="#contact" className="navbar-link" onClick={toggleNav}>Contact</a>
           </div>
         </div>
       </nav>
-
-      {/* Rest of your components */}
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
@@ -54,7 +53,9 @@ function App() {
         <div className="section-content">
           <h2 className="section-title">About Me</h2>
           <p className="section-description">
-            I'm a college student pursuing <b>B.Tech Computer Science and Business Systems</b> at KPR Institute of Engineering and Technology. I have a strong interest in Web Development, Cyber Security, and I'm always eager to learn new technologies and solve real-world problems.
+            <li>I'm a college student pursuing <b>B.Tech Computer Science and Business Systems</b> at KPR Institute of Engineering and Technology.</li>
+            <li>I have a strong interest in Web Development, Cyber Security, Cloud Computing and I'm always eager to learn new technologies and solve real-world problems.</li>
+            <li>Hackfest 2024 Coordinator - Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.</li>
           </p>
         </div>
       </section>
@@ -175,6 +176,30 @@ costs and enhancing transparency.</p>
               <h3 className="project-item-title">SMART WHEEL CHAIR</h3>
               <p className="project-item-description">Designed an IoT-enabled wheelchair with voice, joystick, and mobile app control, featuring
               obstacle detection and health monitoring for enhanced accessibility and safety.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements and Participation Section */}
+      <section id="achievements" className="achievements-section">
+        <div className="section-content">
+          <h2 className="section-title">Achievements and Participation</h2>
+          <div className="achievements-list">
+            <div className="achievement-item">
+              <h3 className="achievement-item-title">Hackfest 2024 Coordinator</h3>
+              <p className="achievement-item-description">Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring
+              smooth execution and team collaboration.</p>
+            </div>
+            <div className="achievement-item">
+              <h3 className="achievement-item-title">TechLead, CSBS Department Association (2024)</h3>
+
+              <p className="achievement-item-description">Selected as the TechLead of the Computer Science and
+              Business Systems (CSBS) Department Association, responsible for leading initiatives and coordinating events.</p>
+            </div>
+            <div className="achievement-item">
+              <h3 className="achievement-item-title">HackXelerate'25 TechLead</h3>
+              <p className="achievement-item-description"></p>
             </div>
           </div>
         </div>
