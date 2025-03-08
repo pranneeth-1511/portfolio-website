@@ -60,9 +60,11 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title">Hi, I'm Pranneeth D K</h1>
           <p className="section-description">
-            I'm a college student pursuing <b>B.Tech Computer Science and Business Systems</b> at KPR Institute of Engineering and Technology.
-            I have a strong interest in Web Development, Cyber Security, Cloud Computing, and I'm always eager to learn new technologies and solve real-world problems.
-            Hackfest 2024 Coordinator - Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.
+            <li>I work well in team-based environments that facilitate innovation and development of effective solutions.</li>
+            <li>I am highly interested in Web Development, Cyber Security, and Cloud Computing**, and I am always keen to learn new technologies and implement them in real-world problem-solving.</li>
+            <li>I am interested in discovering new technologies and solving difficult problems, and I am committed to lifelong learning and problem-solving.</li>
+            <li>My flexibility enables me to work through dynamic situations and perform in high-pressure environments, leading to steady production of excellence and value.</li>
+            <li>By embracing new concepts and applying my analytical capabilities, I help create meaningful solutions while fostering a culture of creativity and efficiency in the teams I work with.</li>
           </p>
         </div>
       </section>
@@ -206,11 +208,15 @@ function App() {
             <div className="experience-item">
               <h2 className="experience-sub-title">Internship</h2>
               <p className="experience-item-description">
-                <p>Company : Codsoft</p>
-                <p>Durination : 4 Weeks</p>
-                <p>Tasks Completed: 
-                  <li>Task 1: </li>
-                </p>
+                <p><b>Company: </b>Codsoft</p>
+                <p><b>Duration: </b>4 Weeks</p>
+                <p><b>Domain: </b>Data Science</p>
+                <p><b>Tasks Completed:</b></p>
+                <ul className="task-list">
+                  <li><b>Task 1:</b> Use the Titanic dataset to create a model that predicts survival rates for Titanic passengers</li>
+                  <li><b>Task 2:</b> To create a model to classify iris flowers into species based on sepal and petal measurements using the iris dataset.</li>
+                  <li><b>Task 3:</b> Develop a machine learning model for detecting fraudulent credit card transactions.</li>
+                </ul>
               </p>
             </div>
           </div>
