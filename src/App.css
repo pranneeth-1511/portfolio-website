@@ -1,15 +1,8 @@
-/* Global Styles */
-.portfolio-container {
-  background-color: #f3f4f6;
-  min-height: 100vh;
-  font-family: 'Arial', sans-serif;
-}
-
 /* Navbar */
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 0.5rem 1rem; /* Reduced padding to make navbar smaller */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -22,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 50px; /* Reduced height */
 }
 
 .navbar-brand {
@@ -63,10 +56,10 @@
 }
 
 /* Hero Section */
-.hero-section {
+.about-section {
   background-color: #3b82f6;
   color: #ffffff;
-  padding: 80px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -122,19 +115,16 @@
 
 .section-description {
   font-size: 1rem;
-  color: #4b5563;
+  color: #ffffff;
   line-height: 1.6;
+  text-align: left;
 }
 
-/* About Section */
-.about-section {
-  padding: 80px 0;
-}
-
-/* Education & Certifications */
+/* Education Section */
 .education-section {
   background-color: #f9fafb;
-  padding: 80px 0;
+  padding: 50px 0;
+  margin-top: 0;
 }
 
 .education-list {
@@ -177,9 +167,54 @@
   color: #4b5563;
 }
 
+/* Certifications Section */
+.certifications-section {
+  background-color: #f9fafb;
+  padding: 80px 0;
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certifications-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.certifications-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.certifications-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.certifications-item-details {
+  font-size: 1rem;
+  color: #4b5563;
+}
 /* Skills Section */
 .skills-section {
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 .skills-list {
@@ -200,7 +235,7 @@
 /* Projects Section */
 .projects-section {
   background-color: #f9fafb;
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 .projects-list {
@@ -248,7 +283,7 @@
 
 /* Contact Section */
 .contact-section {
-  padding: 80px 0;
+  padding: 20px 0;
 }
 
 .contact-description {
@@ -346,7 +381,7 @@
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 60px;
+    top: 50px; /* Adjusted to match the new navbar height */
     right: 20px;
     background-color: #ffffff;
     padding: 10px;
@@ -372,6 +407,7 @@
     font-size: 1rem;
   }
   .section-description {
+
     font-size: 0.9rem;
   }
   .skills-list {
@@ -424,9 +460,9 @@
 
 /* Achievements and Participation Section */
 .achievements-section {
-  padding: 80px 20px;
+  padding: 50px 0px;
   background-color: #f9f9f9; /* Light background for contrast */
-  text-align: center;
+  text-align: left;
 }
 .section-content {
   max-width: 1200px;
@@ -444,21 +480,19 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
+  justify-content: left;
+  flex-direction: column;
 }
 .achievement-item {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 25px;
-  max-width: 350px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
-.achievement-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
+
 .achievement-item-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -469,6 +503,16 @@
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+}
+
+.connect-title {
+  font-size: 1.5rem; /*desktop*/
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
 /* Responsive Design */
@@ -490,6 +534,9 @@
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.6rem; /* mobile */
+  }
+  .connect-title{
+    font-size: 1.6rem;
   }
   .achievement-item {
     padding: 20px;
