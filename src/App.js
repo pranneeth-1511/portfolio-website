@@ -13,6 +13,7 @@ import mailIcon from './Assets/mail-icon.png';
 import linkedinIcon from './Assets/linkedin-icon.png';
 import instagram from './Assets/instagram-icon.png';
 import backgroundImage from './Assets/Background.jpg';
+import googleanalytics from './Assets/Google-analytics.png';
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false); // Initialize to false
@@ -62,7 +63,7 @@ function App() {
           <h1 className="hero-title">Hi, I'm Pranneeth D K</h1>
           <p className="section-description">
             <li>I work well in team-based environments that facilitate innovation and development of effective solutions.</li>
-            <li>I am highly interested in Web Development, Cyber Security, and Cloud Computing**, and I am always keen to learn new technologies and implement them in real-world problem-solving.</li>
+            <li>I am highly interested in Web Development, Cyber Security, and Cloud Computing, and I am always keen to learn new technologies and implement them in real-world problem-solving.</li>
             <li>I am interested in discovering new technologies and solving difficult problems, and I am committed to lifelong learning and problem-solving.</li>
             <li>My flexibility enables me to work through dynamic situations and perform in high-pressure environments, leading to steady production of excellence and value.</li>
             <li>By embracing new concepts and applying my analytical capabilities, I help create meaningful solutions while fostering a culture of creativity and efficiency in the teams I work with.</li>
@@ -147,6 +148,16 @@ function App() {
               </div>
               <p className="certifications-item-details">Coursera</p>
             </div>
+            <div className="certifications-item">
+              <div className="certifications-item-header">
+                <img src={googleanalytics} alt="Certification Logo" className="certifications-item-icon" />
+                <a href="https://drive.google.com/file/d/1tz8aTharP0NAirgHHGZWce7PDznlAW77/view" target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">
+                  Google Analytics
+                </a>
+              </div>
+              <p className="certifications-item-details">Skillshop [Google]</p>
+            </div>
           </div>
         </div>
       </section>
@@ -173,6 +184,7 @@ function App() {
           <div className="skills-list">
             <div className="skill-item">Autodesk Fusion 360</div>
             <div className="skill-item">Git & GitHub</div>
+            <div className="skill-item">AWS</div>
           </div>
         </div>
       </section>
