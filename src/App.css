@@ -18,7 +18,7 @@
 
 /* Portfolio Link Hover Effect */
 .portfolio-link:hover {
-  color: #3b82f6;
+  color: green;
 }
 
 .navbar-content {
@@ -63,7 +63,7 @@
 }
 
 .navbar-link:hover {
-  background-color: #3b82f6;
+  background-color: green;
   color: #ffffff;
   border-color: #3b82f6;
 }
@@ -92,6 +92,7 @@
   font-size: 1.25rem;
   margin-bottom: 40px;
 }
+
 
 /* Section Styles */
 .section-content {
@@ -287,7 +288,7 @@
 }
 
 .project-item-link:hover {
-  background-color: #3b82f6;
+  background-color: green;
   color: #ffffff;
   transform: scale(1.05);
 }
@@ -309,6 +310,7 @@
 }
 
 .contact-email:hover {
+  background-color: green;
   text-decoration: underline;
 }
 
@@ -334,7 +336,7 @@
 }
 
 .contact-button:hover {
-  background-color: #2563eb;
+  background-color: green;
   transform: scale(1.05);
 }
 
