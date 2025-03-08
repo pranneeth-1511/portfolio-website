@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'; // Import App.css
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react"
 
 // Import images
 import githubIcon from './Assests/github.png';
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="portfolio-container">
       <SpeedInsights />
+      <Analytics />
       {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-content">
