@@ -3,6 +3,7 @@ import './App.css'; // Import App.css
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
+
 // Import images
 import githubIcon from './Assets/github.png';
 import ltIcon from './Assets/l&t.png';
@@ -10,6 +11,7 @@ import pythonIcon from './Assets/python.png';
 import aiIcon from './Assets/ai-for-everyone.png';
 import mailIcon from './Assets/mail-icon.png';
 import linkedinIcon from './Assets/linkedin-icon.png';
+import backgroundImage from './Assets/Background.jpg';
 
 function App() {
   const [isNavOpen, setIsNavOpen] = useState(false); // Initialize to false
@@ -19,14 +21,25 @@ function App() {
   };
 
   return (
-    <div className="portfolio-container">
+    <div className="portfolio-container"
+    style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundAttachment: "fixed",
+      minHeight: "100vh",
+      width: "100%",
+    }} 
+    >
       <SpeedInsights />
       <Analytics />
 
       {/* Navbar */}
       <nav className="navbar">
         <div className="navbar-content">
-          <div className="navbar-brand">My Portfolio</div>
+          <div className="navbar-brand">
+          <a href="https://www.pranneethdk.com/" target="_self" className="portfolio-link">My Portfolio</a>
+          </div>
           <button className="navbar-toggle" onClick={toggleNav}>
             &#9776; {/* Hamburger icon */}
           </button>
@@ -37,7 +50,7 @@ function App() {
             <a href="#skills" className="navbar-link" onClick={toggleNav}>Skills</a>
             <a href="#projects" className="navbar-link" onClick={toggleNav}>Projects</a>
             <a href="#achievements" className="navbar-link" onClick={toggleNav}>Achievements</a>
-            <a href="#contact" className="navbar-link" onClick={toggleNav}>Contact</a>
+            <a href="#contact" className="navbar-link" onClick={toggleNav}>Let's connect</a>
           </div>
         </div>
       </nav>
@@ -47,11 +60,10 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-title">Hi, I'm Pranneeth D K</h1>
           <p className="section-description">
-            <li>I'm a college student pursuing <b>B.Tech Computer Science and Business Systems</b> at KPR Institute of Engineering and Technology.</li>
-            <li>I have a strong interest in Web Development, Cyber Security, Cloud Computing, and I'm always eager to learn new technologies and solve real-world problems.</li>
-            <li>Hackfest 2024 Coordinator - Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.</li>
+            I'm a college student pursuing <b>B.Tech Computer Science and Business Systems</b> at KPR Institute of Engineering and Technology.
+            I have a strong interest in Web Development, Cyber Security, Cloud Computing, and I'm always eager to learn new technologies and solve real-world problems.
+            Hackfest 2024 Coordinator - Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.
           </p>
-          <a href="#contact" className="hero-button">Get in Touch</a>
         </div>
       </section>
 
@@ -134,21 +146,22 @@ function App() {
       {/* Skills Section */}
       <section id="skills" className="skills-section">
         <div className="section-content">
-          <h2 className="section-title">Technical Skills</h2>
+        <h2 className="section-title">Skills</h2>
+          <h3 className="sub-title">Technical Skills</h3>
           <div className="skills-list">
             <div className="skill-item">Python</div>
             <div className="skill-item">Java</div>
           </div>
-          <h2 className="section-title">Frontend Development</h2>
+          <h3 className="sub-title">Frontend Development</h3>
           <div className="skills-list">
             <div className="skill-item">React</div>
             <div className="skill-item">HTML & CSS</div>
           </div>
-          <h2 className="section-title">Backend Development</h2>
+          <h3 className="sub-title">Backend Development</h3>
           <div className="skills-list">
             <div className="skill-item">Node.js</div>
           </div>
-          <h2 className="section-title">Tools & Packages</h2>
+          <h3 className="sub-title">Tools & Packages</h3>
           <div className="skills-list">
             <div className="skill-item">Autodesk Fusion 360</div>
             <div className="skill-item">Git & GitHub</div>
@@ -162,15 +175,15 @@ function App() {
           <h2 className="section-title">Projects</h2>
           <div className="projects-list">
             <div className="project-item">
-              <h3 className="project-item-title">E-COMMERCE PLATFORM WITHOUT INTERMEDIARIES</h3>
+              <h3 className="sub-title">E-Commerce platform without intermediaries</h3>
               <p className="project-item-description">Developed a decentralized e-commerce platform enabling direct transactions between buyers and sellers, eliminating the need for intermediaries. Focused on reducing transaction costs and enhancing transparency.</p>
             </div>
             <div className="project-item">
-              <h3 className="project-item-title">ONLINE VOTING SYSTEM</h3>
+              <h3 className="sub-title">Online Voting System</h3>
               <p className="project-item-description">Designed and implemented a secure and user-friendly online voting platform to streamline election processes, ensuring transparency, accessibility, and efficiency.</p>
             </div>
             <div className="project-item">
-              <h3 className="project-item-title">SMART WHEELCHAIR</h3>
+              <h3 className="sub-title">Smart wheelchair</h3>
               <p className="project-item-description">Designed an IoT-enabled wheelchair with voice, joystick, and mobile app control, featuring obstacle detection and health monitoring for enhanced accessibility and safety.</p>
             </div>
           </div>
@@ -183,15 +196,15 @@ function App() {
           <h2 className="section-title">Achievements and Participation</h2>
           <div className="achievements-list">
             <div className="achievement-item">
-              <h3 className="achievement-item-title">Hackfest 2024 Coordinator</h3>
+              <h3 className="sub-title">Hackfest 2024 Coordinator</h3>
               <p className="achievement-item-description">Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.</p>
             </div>
             <div className="achievement-item">
-              <h3 className="achievement-item-title">TechLead, CSBS Department Association (2024)</h3>
+              <h3 className="sub-title">TechLead, CSBS Department Association (2024)</h3>
               <p className="achievement-item-description">Selected as the TechLead of the Computer Science and Business Systems (CSBS) Department Association, responsible for leading initiatives and coordinating events.</p>
             </div>
             <div className="achievement-item">
-              <h3 className="achievement-item-title">HackXelerate'25 TechLead</h3>
+              <h3 className="sub-title">HackXelerate'25 TechLead</h3>
               <p className="achievement-item-description">Selected as the Tech Lead for HackXelerate'25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.</p>
             </div>
           </div>
