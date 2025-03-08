@@ -93,7 +93,6 @@
   margin-bottom: 40px;
 }
 
-
 /* Section Styles */
 .section-content {
   max-width: 1200px;
@@ -109,7 +108,7 @@
 }
 
 .section-description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: black;
   line-height: 1.6;
   text-align: justify;
@@ -558,4 +557,58 @@
   .achievement-item-description {
     font-size: 0.9rem;
   }
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 50px 0;
+}
+
+.experience-section .section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.experience-section .section-title {
+  font-size: 1.5rem; /* Consistent with other section titles */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-item {
+  background-color: #caeff1; /* Consistent with other item backgrounds */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-sub-title {
+  font-size: 1.3rem; /* Consistent with other sub-titles */
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.experience-item-description {
+  font-size: 1.25rem; /* Consistent with other descriptions */
+  color: #4b5563;
+  line-height: 1;
+  text-align: justify;
 }

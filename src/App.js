@@ -97,7 +97,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={githubIcon} alt="GitHub Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1BgFo6xJ-5bKFZFh3eRDNYKm8sqn_v7IW/view" target="_blank" rel="noopener noreferrer" className="certifications-item-title">
+                <a href="https://drive.google.com/file/d/1BgFo6xJ-5bKFZFh3eRDNYKm8sqn_v7IW/view" target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">
                   GitHub Foundations
                 </a>
               </div>
@@ -106,7 +107,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1-xTOj5TpONVq2zSjt_WSx9GXG8Eh2gdb/view" target="_blank" rel="noopener noreferrer" className="certifications-item-title">
+                <a href="https://drive.google.com/file/d/1-xTOj5TpONVq2zSjt_WSx9GXG8Eh2gdb/view" target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">
                   Engineering Graphics & Design
                 </a>
               </div>
@@ -115,7 +117,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/17Tspo3M_vU8o5GOxixda_09AX3HwAOX7/view" target="_blank" rel="noopener noreferrer" className="certifications-item-title">
+                <a href="https://drive.google.com/file/d/17Tspo3M_vU8o5GOxixda_09AX3HwAOX7/view" target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">
                   IT Primer
                 </a>
               </div>
@@ -124,7 +127,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={pythonIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view" target="_blank" rel="noopener noreferrer" className="certifications-item-title">
+                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view" target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">
                   Python for Beginners
                 </a>
               </div>
@@ -133,7 +137,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={aiIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/13d31hAfse3CXFgv8AU8JKlQMCD8K1-g9/view" target="_blank" rel="noopener noreferrer" className="certifications-item-title">
+                <a href="https://drive.google.com/file/d/13d31hAfse3CXFgv8AU8JKlQMCD8K1-g9/view" target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">
                   AI For Everyone
                 </a>
               </div>
@@ -176,19 +181,42 @@ function App() {
           <div className="projects-list">
             <div className="project-item">
               <h3 className="sub-title">E-Commerce platform without intermediaries</h3>
-              <p className="project-item-description">Developed a decentralized e-commerce platform enabling direct transactions between buyers and sellers, eliminating the need for intermediaries. Focused on reducing transaction costs and enhancing transparency.</p>
+              <p className="project-item-description">Developed a decentralized e-commerce platform enabling direct transactions between buyers and sellers, 
+                eliminating the need for intermediaries. Focused on reducing transaction costs and enhancing transparency.</p>
             </div>
             <div className="project-item">
               <h3 className="sub-title">Online Voting System</h3>
-              <p className="project-item-description">Designed and implemented a secure and user-friendly online voting platform to streamline election processes, ensuring transparency, accessibility, and efficiency.</p>
+              <p className="project-item-description">Designed and implemented a secure and user-friendly online voting platform to streamline election processes, 
+                ensuring transparency, accessibility, and efficiency.</p>
             </div>
             <div className="project-item">
               <h3 className="sub-title">Smart wheelchair</h3>
-              <p className="project-item-description">Designed an IoT-enabled wheelchair with voice, joystick, and mobile app control, featuring obstacle detection and health monitoring for enhanced accessibility and safety.</p>
+              <p className="project-item-description">Designed an IoT-enabled wheelchair with voice, joystick, and mobile app control, featuring obstacle detection 
+                and health monitoring for enhanced accessibility and safety.</p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="experience-section">
+        <div className="section-content">
+          <h2 className="section-title">Experience</h2>
+          <div className="experience-list">
+            <div className="experience-item">
+              <h2 className="experience-sub-title">Internship</h2>
+              <p className="experience-item-description">
+                <p>Company : Codsoft</p>
+                <p>Durination : 4 Weeks</p>
+                <p>Tasks Completed: 
+                  <li>Task 1: </li>
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Achievements Section */}
       <section id="achievements" className="achievements-section">
@@ -201,11 +229,13 @@ function App() {
             </div>
             <div className="achievement-item">
               <h3 className="sub-title">TechLead, CSBS Department Association (2024)</h3>
-              <p className="achievement-item-description">Selected as the TechLead of the Computer Science and Business Systems (CSBS) Department Association, responsible for leading initiatives and coordinating events.</p>
+              <p className="achievement-item-description">Selected as the TechLead of the Computer Science and Business Systems (CSBS) Department Association,
+                 responsible for leading initiatives and coordinating events.</p>
             </div>
             <div className="achievement-item">
               <h3 className="sub-title">HackXelerate'25 TechLead</h3>
-              <p className="achievement-item-description">Selected as the Tech Lead for HackXelerate'25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.</p>
+              <p className="achievement-item-description">Selected as the Tech Lead for HackXelerate'25, tasked with managing technical operations,
+                 guiding participants, and ensuring the successful conduct of the hackathon.</p>
             </div>
           </div>
         </div>
@@ -216,7 +246,7 @@ function App() {
         <div className="section-content">
           <h2 className="connect-title">Let's connect together!</h2>
           <div className="contact-buttons">
-            <a href="mailto:pranneethpersonal@gmail.com" className="contact-button" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:contact@pranneethdk.com" className="contact-button" target="_blank" rel="noopener noreferrer">
               <img src={mailIcon} alt="Mail Icon" className="contact-icon" />
               <span>Mail Me</span>
             </a>
