@@ -11,6 +11,7 @@ import pythonIcon from './Assets/python.png';
 import aiIcon from './Assets/ai-for-everyone.png';
 import mailIcon from './Assets/mail-icon.png';
 import linkedinIcon from './Assets/linkedin-icon.png';
+import instagram from './Assets/instagram-icon.png';
 import backgroundImage from './Assets/Background.jpg';
 
 function App() {
@@ -263,6 +264,10 @@ function App() {
             <a href="https://github.com/pranneeth-1511" className="contact-button" target="_blank" rel="noopener noreferrer">
               <img src={githubIcon} alt="GitHub Icon" className="contact-icon" />
               <span>GitHub</span>
+            </a>
+            <a href="https://www.instagram.com/pranneeth_1511/" className="contact-button" target="_blank" rel="noopener noreferrer">
+              <img src={instagram} alt="Instagram Icon" className="contact-icon" />
+              <span>Instagram</span>
             </a>
           </div>
         </div>
