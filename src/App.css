@@ -1,3 +1,7 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 /* Navbar */
 .navbar {
   background-color: white;
@@ -7,6 +11,7 @@
   top: 0;
   z-index: 1000;
 }
+
 /* Portfolio Link */
 .portfolio-link {
   font-size: 1.25rem;
@@ -76,20 +81,20 @@
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .hero-title {
   color: #222;
-  font-size: 3rem;
+  font-size: 1.7rem;
   font-weight: 700;
   margin-bottom: 20px;
   align-content: center;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   margin-bottom: 40px;
 }
 
@@ -101,16 +106,17 @@
 }
 
 .section-title {
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 10px;
 }
 
 .section-description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-style: normal;
   color: black;
-  line-height: 1.6;
+  line-height: 1.5;
   text-align: justify;
 }
 
@@ -149,14 +155,14 @@
 }
 
 .education-item-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin: 0;
 }
 
 .education-item-details {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #4b5563;
 }
 
@@ -194,14 +200,14 @@
 }
 
 .certifications-item-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin: 0;
 }
 
 .certifications-item-details {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #4b5563;
 }
 
@@ -235,15 +241,22 @@
   padding: 12px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #1f2937;
 }
 
-.Subh-title{
-  font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.50rem;
+.sub-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
 }
+
+.Subh-title {
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
 /* Projects Section */
 .projects-section {
   padding: 50px 0;
@@ -263,7 +276,7 @@
 }
 
 .project-item-title {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 8px;
@@ -409,17 +422,16 @@
     border: none;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   .section-title {
-    font-size: 1rem;
+    font-size: 1.7rem;
   }
   .section-description {
-
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .skills-list {
     justify-content: center;
@@ -444,22 +456,23 @@
     margin-bottom: 10px;
   }
 }
+
 /* Tablet Devices (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-content {
     padding: 0 10px;
   }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
   }
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   .section-title {
-    font-size: 1rem;
+    font-size: 1.7rem;
   }
   .section-description {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   .skills-list {
     justify-content: flex-start;
@@ -474,18 +487,21 @@
   padding: 50px 0px;
   text-align: left;
 }
+
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .section-title {
-  font-size: 1.5rem; /*desktop*/
+  font-size: 1.7rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
+
 .achievements-list {
   display: flex;
   flex-wrap: wrap;
@@ -493,6 +509,7 @@
   justify-content: left;
   flex-direction: column;
 }
+
 .achievement-item {
   background-color: #caeff1;
   border-radius: 10px;
@@ -500,15 +517,15 @@
   padding: 25px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .achievement-item-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem; 
   font-weight: 600;
   color: #222;
   margin-bottom: 15px;
 }
+
 .achievement-item-description {
   font-size: 1rem;
   color: #555;
@@ -516,7 +533,7 @@
 }
 
 .connect-title {
-  font-size: 1.5rem; /*desktop*/
+  font-size: 1.7rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 20px;
@@ -528,13 +545,13 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .achievement-item {
     max-width: 100%;
   }
   .achievement-item-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem; 
   }
   .achievement-item-description {
     font-size: 0.95rem;
@@ -543,16 +560,16 @@
 
 @media (max-width: 480px) {
   .section-title {
-    font-size: 1.6rem; /* mobile */
+    font-size: 1.7rem; 
   }
-  .connect-title{
-    font-size: 1.6rem;
+  .connect-title {
+    font-size: 1.7rem; 
   }
   .achievement-item {
     padding: 20px;
   }
   .achievement-item-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem; 
   }
   .achievement-item-description {
     font-size: 0.9rem;
@@ -571,7 +588,7 @@
 }
 
 .experience-section .section-title {
-  font-size: 1.5rem; /* Consistent with other section titles */
+  font-size: 1.7rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 20px;
@@ -587,7 +604,7 @@
 }
 
 .experience-item {
-  background-color: #caeff1; /* Consistent with other item backgrounds */
+  background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -600,15 +617,24 @@
 }
 
 .experience-sub-title {
-  font-size: 1.3rem; /* Consistent with other sub-titles */
+  font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 10px;
 }
 
 .experience-item-description {
-  font-size: 1.25rem; /* Consistent with other descriptions */
+  font-size: 1.25rem;
   color: #4b5563;
   line-height: 1;
   text-align: justify;
+}
+.task-list {
+  line-height: 1.6; 
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.task-list li {
+  margin-bottom: 10px;
 }
