@@ -114,10 +114,10 @@
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: #1f2937;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .section-description {
@@ -369,7 +369,7 @@
     font-size: 1rem;
   }
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .section-description {
     font-size: 0.9rem;
@@ -409,7 +409,7 @@
     font-size: 1.1rem;
   }
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1rem;
   }
   .section-description {
     font-size: 0.95rem;
@@ -433,10 +433,10 @@
   margin: 0 auto;
 }
 .section-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem; /*desktop*/
   font-weight: 700;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -489,7 +489,7 @@
 
 @media (max-width: 480px) {
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* mobile */
   }
   .achievement-item {
     padding: 20px;
