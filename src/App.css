@@ -1,11 +1,24 @@
 /* Navbar */
 .navbar {
-  background-color: #ffffff;
+  background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem; /* Reduced padding to make navbar smaller */
+  padding: 0.5rem 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+/* Portfolio Link */
+.portfolio-link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Portfolio Link Hover Effect */
+.portfolio-link:hover {
+  color: #3b82f6;
 }
 
 .navbar-content {
@@ -15,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px; /* Reduced height */
+  height: 50px;
 }
 
 .navbar-brand {
@@ -57,7 +70,6 @@
 
 /* Hero Section */
 .about-section {
-  background-color: #3b82f6;
   color: #ffffff;
   padding: 50px 20px;
   text-align: center;
@@ -69,6 +81,7 @@
 }
 
 .hero-title {
+  color: #222;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -78,25 +91,6 @@
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 40px;
-}
-
-.hero-button {
-  background-color: #ffffff;
-  color: #3b82f6;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  align-items: center;
-}
-
-.hero-button:hover {
-  background-color: #3b82f6;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  transform: scale(1.05);
 }
 
 /* Section Styles */
@@ -115,14 +109,13 @@
 
 .section-description {
   font-size: 1rem;
-  color: #ffffff;
+  color: black;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
 }
 
 /* Education Section */
 .education-section {
-  background-color: #f9fafb;
   padding: 50px 0;
   margin-top: 0;
 }
@@ -134,7 +127,7 @@
 }
 
 .education-item {
-  background-color: #ffffff;
+  background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -169,18 +162,17 @@
 
 /* Certifications Section */
 .certifications-section {
-  background-color: #f9fafb;
   padding: 80px 0;
 }
 
 .certifications-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .certifications-item {
-  background-color: #ffffff;
+  background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -194,8 +186,8 @@
 }
 
 .certifications-item-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
@@ -212,6 +204,21 @@
   font-size: 1rem;
   color: #4b5563;
 }
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  .certifications-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .certifications-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Skills Section */
 .skills-section {
   padding: 50px 0;
@@ -224,7 +231,7 @@
 }
 
 .skill-item {
-  background-color: #ffffff;
+  background-color: #caeff1;
   padding: 12px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -232,9 +239,13 @@
   color: #1f2937;
 }
 
+.Subh-title{
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.50rem;
+}
 /* Projects Section */
 .projects-section {
-  background-color: #f9fafb;
   padding: 50px 0;
 }
 
@@ -245,7 +256,7 @@
 }
 
 .project-item {
-  background-color: #ffffff;
+  background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -303,10 +314,10 @@
 
 .contact-buttons {
   display: flex;
-  flex-direction: row; /* Buttons in a single line */
-  gap: 20px; /* Spacing between buttons */
-  justify-content: center; /* Center buttons horizontally */
-  flex-wrap: wrap; /* Allow wrapping to the next line */
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .contact-button {
@@ -319,7 +330,7 @@
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
 }
 
 .contact-button:hover {
@@ -335,9 +346,8 @@
 
 /* Footer */
 .footer {
-  background-color: #1f2937;
-  color: #ffffff;
-  padding: 20px 0;
+  color: black;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -381,7 +391,7 @@
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 50px; /* Adjusted to match the new navbar height */
+    top: 50px;
     right: 20px;
     background-color: #ffffff;
     padding: 10px;
@@ -414,15 +424,15 @@
     justify-content: center;
   }
   .contact-buttons {
-    gap: 10px; /* Reduced gap for mobile */
-    justify-content: flex-start; /* Align buttons to the start */
+    gap: 10px;
+    justify-content: flex-start;
   }
   .contact-button {
-    padding: 8px 16px; /* Reduced padding for smaller screens */
-    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
   .contact-icon {
-    width: 20px; /* Slightly smaller icons */
+    width: 20px;
     height: 20px;
   }
   .education-item-header {
@@ -461,7 +471,6 @@
 /* Achievements and Participation Section */
 .achievements-section {
   padding: 50px 0px;
-  background-color: #f9f9f9; /* Light background for contrast */
   text-align: left;
 }
 .section-content {
@@ -484,7 +493,7 @@
   flex-direction: column;
 }
 .achievement-item {
-  background-color: #fff;
+  background-color: #caeff1;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 25px;
