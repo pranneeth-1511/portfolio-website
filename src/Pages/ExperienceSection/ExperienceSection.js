@@ -27,7 +27,6 @@ const ExperienceSection = () => {
             <p className="experience-item-description">
               <p><b>Organization: </b>IEEE SB SSIT</p>
               <p><b>Duration: </b>June 2024 – Present</p>
-              <p><b>Role: </b>Part-time</p>
               <p><b>Institution: </b>KPR Institute of Engineering and Technology</p>
               <p><b>Responsibilities:</b></p>
               <ul className="task-list">
