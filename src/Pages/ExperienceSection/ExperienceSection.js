@@ -22,6 +22,20 @@ const ExperienceSection = () => {
               </ul>
             </p>
           </div>
+          <div className="experience-item">
+            <h3 className='sub-title'>Executive Member</h3>
+            <p className="experience-item-description">
+              <p><b>Organization: </b>IEEE SB SSIT</p>
+              <p><b>Duration: </b>June 2024 – Present</p>
+              <p><b>Role: </b>Part-time</p>
+              <p><b>Institution: </b>KPR Institute of Engineering and Technology</p>
+              <ul className="task-list">
+                <li>Assisted in organizing technical events, workshops, and hackathons for student engagement.</li>
+                <li>Collaborated with peers to promote innovation and knowledge-sharing in engineering and technology.</li>
+                <li>Contributed to IEEE initiatives aimed at professional development and community building.</li>
+              </ul>
+            </p>
+          </div>
         </div>
       </div>
     </section>
