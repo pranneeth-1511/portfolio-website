@@ -101,7 +101,7 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={githubIcon} alt="GitHub Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1BgFo6xJ-5bKFZFh3eRDNYKm8sqn_v7IW/view" target="_blank" 
+                <a href="https://drive.google.com/file/d/1BgFo6xJ-5bKFZFh3eRDNYKm8sqn_v7IW/view?usp=drive_link" target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                   GitHub Foundations
                 </a>
@@ -111,7 +111,7 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1-xTOj5TpONVq2zSjt_WSx9GXG8Eh2gdb/view" target="_blank" 
+                <a href="https://drive.google.com/file/d/1-xTOj5TpONVq2zSjt_WSx9GXG8Eh2gdb/view?usp=drive_link" target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                   Engineering Graphics & Design
                 </a>
@@ -121,7 +121,7 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/17Tspo3M_vU8o5GOxixda_09AX3HwAOX7/view" target="_blank" 
+                <a href="https://drive.google.com/file/d/17Tspo3M_vU8o5GOxixda_09AX3HwAOX7/view?usp=drive_link" target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                   IT Primer
                 </a>
@@ -131,7 +131,7 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={pythonIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view" target="_blank" 
+                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view?usp=sharing" target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                   Python for Beginners
                 </a>
@@ -141,7 +141,7 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={aiIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/13d31hAfse3CXFgv8AU8JKlQMCD8K1-g9/view" target="_blank" 
+                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view?usp=sharing" target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                   AI For Everyone
                 </a>
@@ -151,7 +151,7 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={googleanalytics} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1tz8aTharP0NAirgHHGZWce7PDznlAW77/view" target="_blank" 
+                <a href="https://drive.google.com/file/d/1tz8aTharP0NAirgHHGZWce7PDznlAW77/view?usp=sharing" target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                   Google Analytics
                 </a>
@@ -219,7 +219,8 @@ function App() {
           <h2 className="section-title">Experience</h2>
           <div className="experience-list">
             <div className="experience-item">
-              <h2 className="experience-sub-title">Internship</h2>
+              <a href="https://drive.google.com/file/d/1MH1Zxw5Hokw8EaGPKnFmwCvf4HBOs6EM/view?usp=sharing" target="_blank" 
+                rel="noopener noreferrer"className="experience-sub-title">Internship</a>
               <p className="experience-item-description">
                 <p><b>Company: </b>Codsoft</p>
                 <p><b>Duration: </b>4 Weeks</p>
@@ -255,6 +256,12 @@ function App() {
               <h3 className="sub-title">HackXelerate'25 TechLead</h3>
               <p className="achievement-item-description">Selected as the Tech Lead for HackXelerate'25, tasked with managing technical operations,
                  guiding participants, and ensuring the successful conduct of the hackathon.</p>
+            </div>
+            <div className="achievement-item">
+              <a href="https://drive.google.com/file/d/1HCYXxTq0bd7jQ8mmEt9nENu3nclouyJp/view?usp=sharing" target="_blank" 
+                rel="noopener noreferrer" className="subh-title">TechfusionX Coordinator</a>
+              <p className="achievement-item-description">Received Certificate of Coordination by Capabl for the 2-day Coding Saksham Program '24, handling logistics, team coordination,
+                 and coordinating industry-led sessions at KPR Institute of Engineering and Technology.</p>
             </div>
           </div>
         </div>

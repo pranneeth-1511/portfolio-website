@@ -176,6 +176,12 @@
   color: #1f2937;
   margin: 0;
 }
+.certifications-item-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin: 0;
+}
 .certifications-item-details {
   font-size: 1.2rem;
   color: #4b5563;
@@ -215,9 +221,19 @@
   color: #1f2937;
   margin-bottom: 10px;
 }
-.Subh-title {
-  font-style: italic;
+
+.subh-title {
   font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.subh-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin-bottom: 10px;
 }
 /* Projects Section */
 .projects-section {
@@ -241,7 +257,7 @@
   margin-bottom: 8px;
 }
 .project-item-description {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #4b5563;
   margin-bottom: 12px;
 }
@@ -448,9 +464,11 @@
 }
 .achievement-item {
   background-color: #caeff1;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -461,7 +479,7 @@
   margin-bottom: 15px;
 }
 .achievement-item-description {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #555;
   line-height: 1.6;
 }
@@ -544,8 +562,15 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 10px;
+  margin: 0;
 }
+.experience-sub-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin: 0;
+}
+
 .experience-item-description {
   font-size: 1.25rem;
   color: #4b5563;
