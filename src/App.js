@@ -92,7 +92,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Certifications Section */}
       <section id="certifications" className="certifications-section">
         <div className="section-content">
@@ -101,8 +100,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={githubIcon} alt="GitHub Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1BgFo6xJ-5bKFZFh3eRDNYKm8sqn_v7IW/view?usp=drive_link" target="_blank" 
-                rel="noopener noreferrer" className="certifications-item-title">
+                <a href={require("./Assets/PDF/Certificates/GitHub Foundations.pdf")} target="_blank" 
+                  rel="noopener noreferrer" className="certifications-item-title">
                   GitHub Foundations
                 </a>
               </div>
@@ -111,8 +110,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1-xTOj5TpONVq2zSjt_WSx9GXG8Eh2gdb/view?usp=drive_link" target="_blank" 
-                rel="noopener noreferrer" className="certifications-item-title">
+                <a href={require("./Assets/PDF/Certificates/Engineering Graphics and Design.pdf")} target="_blank" 
+                  rel="noopener noreferrer" className="certifications-item-title">
                   Engineering Graphics & Design
                 </a>
               </div>
@@ -121,8 +120,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/17Tspo3M_vU8o5GOxixda_09AX3HwAOX7/view?usp=drive_link" target="_blank" 
-                rel="noopener noreferrer" className="certifications-item-title">
+                <a href={require("./Assets/PDF/Certificates/IT Primer.pdf")} target="_blank" 
+                  rel="noopener noreferrer" className="certifications-item-title">
                   IT Primer
                 </a>
               </div>
@@ -131,8 +130,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={pythonIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view?usp=sharing" target="_blank" 
-                rel="noopener noreferrer" className="certifications-item-title">
+                <a href={require("./Assets/PDF/Certificates/Python Basics Certificate - Udemy.pdf")} target="_blank" 
+                  rel="noopener noreferrer" className="certifications-item-title">
                   Python for Beginners
                 </a>
               </div>
@@ -141,8 +140,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={aiIcon} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/15Of2FtYsKEtHNgbn5auTVllTFxOwTZz2/view?usp=sharing" target="_blank" 
-                rel="noopener noreferrer" className="certifications-item-title">
+                <a href={require("./Assets/PDF/Certificates/AI For Everyone.pdf")} target="_blank" 
+                  rel="noopener noreferrer" className="certifications-item-title">
                   AI For Everyone
                 </a>
               </div>
@@ -151,8 +150,8 @@ function App() {
             <div className="certifications-item">
               <div className="certifications-item-header">
                 <img src={googleanalytics} alt="Certification Logo" className="certifications-item-icon" />
-                <a href="https://drive.google.com/file/d/1tz8aTharP0NAirgHHGZWce7PDznlAW77/view?usp=sharing" target="_blank" 
-                rel="noopener noreferrer" className="certifications-item-title">
+                <a href={require("./Assets/PDF/Certificates/Google Analytics.pdf")} target="_blank" 
+                  rel="noopener noreferrer" className="certifications-item-title">
                   Google Analytics
                 </a>
               </div>
@@ -219,7 +218,7 @@ function App() {
           <h2 className="section-title">Experience</h2>
           <div className="experience-list">
             <div className="experience-item">
-              <a href="https://drive.google.com/file/d/1MH1Zxw5Hokw8EaGPKnFmwCvf4HBOs6EM/view?usp=sharing" target="_blank" 
+              <a href={require("./Assets/PDF/Codsoft Internship.pdf")} target="_blank" 
                 rel="noopener noreferrer"className="experience-sub-title">Internship</a>
               <p className="experience-item-description">
                 <p><b>Company: </b>Codsoft</p>
@@ -258,7 +257,7 @@ function App() {
                  guiding participants, and ensuring the successful conduct of the hackathon.</p>
             </div>
             <div className="achievement-item">
-              <a href="https://drive.google.com/file/d/1HCYXxTq0bd7jQ8mmEt9nENu3nclouyJp/view?usp=sharing" target="_blank" 
+              <a href={require("./Assets/PDF/Capabl Hackathon.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="subh-title">TechfusionX Coordinator</a>
               <p className="achievement-item-description">Received Certificate of Coordination by Capabl for the 2-day Coding Saksham Program '24, handling logistics, team coordination,
                  and coordinating industry-led sessions at KPR Institute of Engineering and Technology.</p>
