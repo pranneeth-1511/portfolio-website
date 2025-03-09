@@ -50,20 +50,20 @@
 }
 
 .achievement-item-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #222;
   margin-bottom: 15px;
 }
 
 .achievement-item-description {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   color: #555;
   line-height: 1.6;
 }
 
 .connect-title {
-  font-size: 1.7rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #333;
   margin-bottom: 20px;
@@ -83,7 +83,7 @@
   }
 
   .achievement-item-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 
   .achievement-item-description {
@@ -97,7 +97,7 @@
   }
 
   .connect-title {
-    font-size: 1.7rem;
+    font-size: 1.25rem;
   }
 
   .achievement-item {
@@ -105,7 +105,7 @@
   }
 
   .achievement-item-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 
   .achievement-item-description {
