@@ -1,0 +1,62 @@
+/* Certifications Section */
+.certifications-section {
+    padding: 80px 0;
+  }
+  
+  .certifications-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .certifications-item {
+    background-color: #caeff1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .certifications-item-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .certifications-item-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .certifications-item-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+  
+  .certifications-item-title:hover {
+    color: green;
+  }
+  
+  .certifications-item-details {
+    font-size: 1.2rem;
+    color: #4b5563;
+  }
+  
+  /* Mobile Devices (up to 767px) */
+  @media (max-width: 767px) {
+    .certifications-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Tablet Devices (768px to 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .certifications-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

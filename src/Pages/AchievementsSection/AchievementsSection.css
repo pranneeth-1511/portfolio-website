@@ -1,0 +1,114 @@
+/* Achievements and Participation Section */
+.achievements-section {
+  padding: 50px 0px;
+  text-align: left;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: left;
+  flex-direction: column;
+}
+.subh-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.subh-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin-bottom: 10px;
+}
+.achievement-item {
+  background-color: #caeff1;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  padding-bottom: 5px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.achievement-item-description {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.connect-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .achievement-item {
+    max-width: 100%;
+  }
+
+  .achievement-item-title {
+    font-size: 1.4rem;
+  }
+
+  .achievement-item-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .connect-title {
+    font-size: 1.7rem;
+  }
+
+  .achievement-item {
+    padding: 20px;
+  }
+
+  .achievement-item-title {
+    font-size: 1.4rem;
+  }
+
+  .achievement-item-description {
+    font-size: 0.9rem;
+  }
+}
