@@ -25,6 +25,7 @@ const SkillsSection = () => {
           <div className="skill-item">Autodesk Fusion 360</div>
           <div className="skill-item">Git & GitHub</div>
           <div className="skill-item">AWS</div>
+          <div className="skill-item">CI/CD Pipeline</div>
         </div>
       </div>
     </section>

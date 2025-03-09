@@ -29,6 +29,7 @@ const ExperienceSection = () => {
               <p><b>Duration: </b>June 2024 – Present</p>
               <p><b>Role: </b>Part-time</p>
               <p><b>Institution: </b>KPR Institute of Engineering and Technology</p>
+              <p><b>Responsibilities:</b></p>
               <ul className="task-list">
                 <li>Assisted in organizing technical events, workshops, and hackathons for student engagement.</li>
                 <li>Collaborated with peers to promote innovation and knowledge-sharing in engineering and technology.</li>

@@ -1,4 +1,3 @@
-/* Navbar */
 .navbar {
   background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -7,7 +6,6 @@
   top: 0;
   z-index: 1000;
 }
-
 .portfolio-link {
   font-size: 1.25rem;
   font-weight: 600;
@@ -66,8 +64,6 @@
   color: #ffffff;
   border-color: #3b82f6;
 }
-
-/* Mobile Devices (up to 767px) */
 @media (max-width: 767px) {
   .navbar-toggle {
     display: block;

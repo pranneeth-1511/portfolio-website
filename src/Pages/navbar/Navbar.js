@@ -23,6 +23,7 @@ const Navbar = () => {
           <a href="#certifications" className="navbar-link" onClick={toggleNav}>Certifications</a>
           <a href="#skills" className="navbar-link" onClick={toggleNav}>Skills</a>
           <a href="#projects" className="navbar-link" onClick={toggleNav}>Projects</a>
+          <a href="#experience" className="navbar-link" onClick={toggleNav}>Experience</a>
           <a href="#achievements" className="navbar-link" onClick={toggleNav}>Achievements</a>
           <a href="#contact" className="navbar-link" onClick={toggleNav}>Let's connect</a>
         </div>
