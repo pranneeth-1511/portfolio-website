@@ -1,7 +1,6 @@
 * {
   font-family: 'Times New Roman', Times, serif;
 }
-
 /* Navbar */
 .navbar {
   background-color: white;
@@ -11,7 +10,6 @@
   top: 0;
   z-index: 1000;
 }
-
 /* Portfolio Link */
 .portfolio-link {
   font-size: 1.25rem;
@@ -20,12 +18,10 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 /* Portfolio Link Hover Effect */
 .portfolio-link:hover {
   color: green;
 }
-
 .navbar-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,13 +31,11 @@
   align-items: center;
   height: 50px;
 }
-
 .navbar-brand {
   font-size: 1.25rem;
   font-weight: 600;
   color: #1f2937;
 }
-
 .navbar-toggle {
   display: none;
   background: none;
@@ -49,12 +43,10 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
-
 .navbar-links {
   display: flex;
   gap: 1rem;
 }
-
 .navbar-link {
   color: white;
   text-decoration: none;
@@ -66,25 +58,21 @@
   transition: color 0.3s ease, background-color 0.3s ease;
   margin: 0 0.5rem;
 }
-
 .navbar-link:hover {
   background-color: green;
   color: #ffffff;
   border-color: #3b82f6;
 }
-
 /* Hero Section */
 .about-section {
   color: #ffffff;
   padding: 50px 20px;
   text-align: center;
 }
-
 .hero-content {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .hero-title {
   color: #222;
   font-size: 1.7rem;
@@ -92,26 +80,22 @@
   margin-bottom: 20px;
   align-content: center;
 }
-
 .hero-subtitle {
   font-size: 1.4rem;
   margin-bottom: 40px;
 }
-
 /* Section Styles */
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .section-title {
   font-size: 1.7rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 10px;
 }
-
 .section-description {
   font-size: 1.3rem;
   font-style: normal;
@@ -119,33 +103,28 @@
   line-height: 1.5;
   text-align: justify;
 }
-
 /* Education Section */
 .education-section {
   padding: 50px 0;
   margin-top: 0;
 }
-
 .education-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .education-item {
   background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-
 .education-item-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
 }
-
 .education-item-icon {
   width: 40px;
   height: 40px;
@@ -153,44 +132,37 @@
   object-fit: cover;
   margin-right: 10px;
 }
-
 .education-item-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin: 0;
 }
-
 .education-item-details {
   font-size: 1.2rem;
   color: #4b5563;
 }
-
 /* Certifications Section */
 .certifications-section {
   padding: 80px 0;
 }
-
 .certifications-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
 .certifications-item {
   background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-
 .certifications-item-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
 }
-
 .certifications-item-icon {
   width: 50px;
   height: 50px;
@@ -198,44 +170,43 @@
   object-fit: cover;
   margin-right: 10px;
 }
-
 .certifications-item-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin: 0;
 }
-
+.certifications-item-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin: 0;
+}
 .certifications-item-details {
   font-size: 1.2rem;
   color: #4b5563;
 }
-
 /* Mobile Devices (up to 767px) */
 @media (max-width: 767px) {
   .certifications-list {
     grid-template-columns: 1fr;
   }
 }
-
 /* Tablet Devices (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .certifications-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 /* Skills Section */
 .skills-section {
   padding: 50px 0;
 }
-
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
-
 .skill-item {
   background-color: #caeff1;
   padding: 12px 20px;
@@ -244,7 +215,6 @@
   font-size: 1.2rem;
   color: #1f2937;
 }
-
 .sub-title {
   font-size: 1.4rem;
   font-weight: 600;
@@ -252,42 +222,45 @@
   margin-bottom: 10px;
 }
 
-.Subh-title {
-  font-style: italic;
+.subh-title {
   font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
 }
 
+.subh-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin-bottom: 10px;
+}
 /* Projects Section */
 .projects-section {
   padding: 50px 0;
 }
-
 .projects-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .project-item {
   background-color: #caeff1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-
 .project-item-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 8px;
 }
-
 .project-item-description {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #4b5563;
   margin-bottom: 12px;
 }
-
 .project-item-link {
   background-color: #e0f2fe;
   color: #3b82f6;
@@ -298,34 +271,28 @@
   font-size: 1rem;
   transition: all 0.3s ease;
 }
-
 .project-item-link:hover {
   background-color: green;
   color: #ffffff;
   transform: scale(1.05);
 }
-
 /* Contact Section */
 .contact-section {
   padding: 20px 0;
 }
-
 .contact-description {
   font-size: 1rem;
   color: #4b5563;
 }
-
 .contact-email {
   color: #3b82f6;
   text-decoration: none;
   transition: text-decoration 0.3s ease;
 }
-
 .contact-email:hover {
   background-color: green;
   text-decoration: underline;
 }
-
 .contact-buttons {
   display: flex;
   flex-direction: row;
@@ -333,7 +300,6 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .contact-button {
   display: flex;
   align-items: center;
@@ -346,37 +312,31 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
   white-space: nowrap;
 }
-
 .contact-button:hover {
   background-color: green;
   transform: scale(1.05);
 }
-
 .contact-icon {
   width: 24px;
   height: 24px;
   object-fit: cover;
 }
-
 /* Footer */
 .footer {
   color: black;
   padding: 10px 0;
   text-align: center;
 }
-
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
 /* Image Container */
 .image-container {
   position: relative;
   z-index: 1;
 }
-
 /* Image */
 .image-container img {
   position: absolute;
@@ -386,14 +346,12 @@
   width: 100%;
   height: auto;
 }
-
 /* Text Content */
 .text-content {
   position: relative;
   z-index: 1;
   padding-top: 20px;
 }
-
 /* Media Queries for Responsiveness */
 /* Mobile Devices (up to 767px) */
 @media (max-width: 767px) {
@@ -456,7 +414,6 @@
     margin-bottom: 10px;
   }
 }
-
 /* Tablet Devices (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-content {
@@ -481,18 +438,15 @@
     gap: 15px;
   }
 }
-
 /* Achievements and Participation Section */
 .achievements-section {
   padding: 50px 0px;
   text-align: left;
 }
-
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .section-title {
   font-size: 1.7rem;
   font-weight: 700;
@@ -501,7 +455,6 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
-
 .achievements-list {
   display: flex;
   flex-wrap: wrap;
@@ -509,29 +462,27 @@
   justify-content: left;
   flex-direction: column;
 }
-
 .achievement-item {
   background-color: #caeff1;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .achievement-item-title {
   font-size: 1.4rem; 
   font-weight: 600;
   color: #222;
   margin-bottom: 15px;
 }
-
 .achievement-item-description {
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #555;
   line-height: 1.6;
 }
-
 .connect-title {
   font-size: 1.7rem;
   font-weight: 700;
@@ -541,7 +492,6 @@
   letter-spacing: 1.5px;
   text-align: center;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .section-title {
@@ -557,7 +507,6 @@
     font-size: 0.95rem;
   }
 }
-
 @media (max-width: 480px) {
   .section-title {
     font-size: 1.7rem; 
@@ -575,18 +524,15 @@
     font-size: 0.9rem;
   }
 }
-
 /* Experience Section */
 .experience-section {
   padding: 50px 0;
 }
-
 .experience-section .section-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .experience-section .section-title {
   font-size: 1.7rem;
   font-weight: 700;
@@ -596,13 +542,11 @@
   letter-spacing: 1.5px;
   text-align: left;
 }
-
 .experience-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .experience-item {
   background-color: #caeff1;
   padding: 20px;
@@ -610,17 +554,21 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .experience-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 .experience-sub-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 10px;
+  margin: 0;
+}
+.experience-sub-title:hover {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: green;
+  margin: 0;
 }
 
 .experience-item-description {
@@ -634,7 +582,6 @@
   margin-top: 10px;
   padding-left: 20px;
 }
-
 .task-list li {
   margin-bottom: 10px;
 }
