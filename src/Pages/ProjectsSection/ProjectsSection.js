@@ -19,8 +19,8 @@ const ProjectsSection = () => {
           </div>
           <div className="project-item">
             <h3 className="sub-title">Smart wheelchair</h3>
-            <p className="project-item-description">Designed an IoT-enabled wheelchair with voice, joystick, and mobile app control, featuring obstacle detection 
-              and health monitoring for enhanced accessibility and safety.</p>
+            <p className="project-item-description">Designed an IoT-enabled wheelchair using Python and Tkinter, joystick, and mobile app control.
+              Features include obstacle detection and health monitoring, enhancing accessibility and safety</p>
           </div>
         </div>
       </div>
