@@ -12,6 +12,10 @@ const HeroSection = () => {
             environments, leading to steady production of excellence and value. By embracing new concepts and applying my analytical capabilities, I help create meaningful solutions while fostering
             a culture of creativity and efficiency in the teams I work with.</p>
       </div>
+      <div className="hero-content">
+        <a href="https://drive.google.com/file/d/1UZjxu9YHmBG1ERex3oXiw0BCquH43zch/view?usp=sharing" target="_blank" 
+        rel="noopener noreferrer" className="button-style">Download Resume</a>
+      </div>
     </section>
   );
 };

@@ -18,7 +18,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={githubIcon} alt="GitHub Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/GitHub Foundations.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/GitHub Foundations.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                 GitHub Foundations
               </a>
@@ -28,7 +28,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/Engineering Graphics and Design.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/Engineering Graphics and Design.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                 Engineering Graphics & Design
               </a>
@@ -38,7 +38,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={ltIcon} alt="Certification Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/IT Primer.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/IT Primer.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                 IT Primer
               </a>
@@ -48,7 +48,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={pythonIcon} alt="Certification Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/Python Basics Certificate - Udemy.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/Python Basics Certificate - Udemy.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                 Python for Beginners
               </a>
@@ -58,7 +58,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={aiIcon} alt="Certification Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/AI For Everyone.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/AI For Everyone.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                 AI For Everyone
               </a>
@@ -68,7 +68,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={googleanalytics} alt="Certification Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/Google Analytics.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/Google Analytics.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">
                 Google Analytics
               </a>
@@ -78,7 +78,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={OCIDFA} alt="Certification Logo" className="certifications-item-icon" />
-              <a href={require("../../Assets/PDF/Certificates/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf")} target="_blank" 
+              <a href={require("../../Assets/PDF/Certificates/course/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">OCI Data Foundations Associate 2024</a>
             </div>
             <p className="certifications-item-details">Oracle University</p>
