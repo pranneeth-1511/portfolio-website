@@ -46,6 +46,12 @@
     color: #4b5563;
   }
   
+  .subtitle{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
   /* Mobile Devices (up to 767px) */
   @media (max-width: 767px) {
     .certifications-list {
