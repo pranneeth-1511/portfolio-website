@@ -36,6 +36,7 @@
   }
   
   .section-description {
+    text-indent: 50px;
     font-size: 1.4rem;
     font-style: normal;
     color: black;

@@ -11,13 +11,20 @@
   }
   
   .skill-item {
+    align-items: center;
+    gap: 10px;
     background-color: #caeff1;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     font-size: 1.25rem;
     color: #1f2937;
   }
+  .skill-logo {
+    vertical-align: bottom;
+    width: 30px; 
+    height: 30px;
+}
   
   .sub-title {
     font-size: 1.4rem;
