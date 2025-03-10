@@ -8,7 +8,7 @@ const ExperienceSection = () => {
         <h2 className="section-title">Experience</h2>
         <div className="experience-list">
           <div className="experience-item">
-            <a href={require("../../Assets/PDF/Codsoft Internship.pdf")} target="_blank" 
+            <a href={require("../../Assets/PDF/Certificates/Codsoft Internship.pdf")} target="_blank" 
               rel="noopener noreferrer" className="experience-sub-title">Internship</a>
             <p className="experience-item-description">
               <p><b>Company: </b>Codsoft</p>

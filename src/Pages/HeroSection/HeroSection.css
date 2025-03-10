@@ -43,3 +43,37 @@
     line-height: 1.5;
     text-align: justify;
   }
+
+  .resume-link {
+    text-decoration: none;
+    align-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #0000FF;
+    color: #FFFFFF;
+    border: 1px solid #d1d5db;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    margin: 0 0.5rem;
+  }
+  
+  .resume-link:hover {
+    background-color: green;
+    color: #ffffff;
+    border-color: #3b82f6;
+  }
+
+  .button-style {
+    align-items: center;
+    gap: 10px;
+    background-color: #0000FF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .button-style:hover {
+    background-color: green;
+  }
