@@ -13,7 +13,7 @@ const HeroSection = () => {
             a culture of creativity and efficiency in the teams I work with.</p>
       </div>
       <div className="hero-content">
-        <a href={require("../../Assets/PDF/PRANNEETH D K RESUME.pdf")} target="_blank" 
+        <a href="https://drive.google.com/file/d/1UZjxu9YHmBG1ERex3oXiw0BCquH43zch/view?usp=sharing" target="_blank" 
         rel="noopener noreferrer" className="button-style">Download Resume</a>
       </div>
     </section>
