@@ -7,6 +7,7 @@ import pythonIcon from '../../Assets/python.png';
 import aiIcon from '../../Assets/ai-for-everyone.png';
 import googleanalytics from '../../Assets/Google-analytics.png';
 import cybersecurity from '../../Assets/cyber-security.jpeg';
+import OCIDFA from '../../Assets/OCIDataFoundationsAssociate.png'
 
 const Certifications = () => {
   return (
@@ -80,6 +81,13 @@ const Certifications = () => {
               <h3 className='subtitle'>Cyber Security | Ongoing</h3>
             </div>
             <p className="certifications-item-details">Udemy</p>
+          </div>
+          <div className="certifications-item">
+            <div className="certifications-item-header">
+              <img src={OCIDFA} alt="Certification Logo" className="certifications-item-icon" />
+              <h3 className='subtitle'>OCI Data Foundations Associate | Ongoing</h3>
+            </div>
+            <p className="certifications-item-details">Oracle University</p>
           </div>
         </div>
       </div>
