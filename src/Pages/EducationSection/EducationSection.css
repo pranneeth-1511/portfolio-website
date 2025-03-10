@@ -1,36 +1,57 @@
 .education-section {
-    padding: 50px 0;
-    margin-top: 0;
-  }
-  
+  padding: 50px 0;
+  margin-top: 0;
+}
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 18px; /* Spacing between items */
+}
+
+.education-item {
+  background-color: #caeff1;
+  border-radius: 15px;
+  padding: 10px;
+  padding-bottom:inherit;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.education-item-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.education-item-details {
+  font-size: 1.25rem;
+  color: #4b5563;
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
   .education-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
   }
-  
-  .education-item {
-    background-color: #caeff1;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+  .education-list {
+      grid-template-columns: 1fr;
   }
-  
-  .education-item-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  
-  .education-item-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin: 0;
-  }
-  
-  .education-item-details {
-    font-size: 1.25rem;
-    color: #4b5563;
-  }
+}

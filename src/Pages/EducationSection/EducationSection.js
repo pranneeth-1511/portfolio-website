@@ -17,8 +17,7 @@ const EducationSection = () => {
           </div>
           <div className="education-item">
             <h3 className="education-item-title">KPR INSTITUTE OF ENGINEERING AND TECHNOLOGY - COIMBATORE</h3>
-            <p className="education-item-details">B.Tech COMPUTER SCIENCE AND BUSINESS SYSTEMS | [2022-2026]</p>
-            <p className="education-item-details">CGPA: 7.1</p>
+            <p className="education-item-details">B.Tech COMPUTER SCIENCE AND BUSINESS SYSTEMS<br></br> [2022-2026]<br></br><b>CGPA:</b> 7.1</p>
           </div>
         </div>
       </div>

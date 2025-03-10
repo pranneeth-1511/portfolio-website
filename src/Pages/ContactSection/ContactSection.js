@@ -9,7 +9,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="section-content">
-        <h2 className="connect-title">Let's connect together!</h2>
+        <p className="connect-title">Let's collaborate and build something amazing! Reach out to me</p>
         <div className="contact-buttons">
           <a href="mailto:contact@pranneethdk.com" className="contact-button" target="_blank" rel="noopener noreferrer">
             <img src={mailIcon} alt="Mail Icon" className="contact-icon" />

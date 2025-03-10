@@ -77,18 +77,18 @@ const Certifications = () => {
           </div>
           <div className="certifications-item">
             <div className="certifications-item-header">
-              <img src={cybersecurity} alt="Certification Logo" className="certifications-item-icon" />
-              <h3 className='subtitle'>Cyber Security | Ongoing</h3>
-            </div>
-            <p className="certifications-item-details">Udemy</p>
-          </div>
-          <div className="certifications-item">
-            <div className="certifications-item-header">
               <img src={OCIDFA} alt="Certification Logo" className="certifications-item-icon" />
               <a href={require("../../Assets/PDF/Certificates/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf")} target="_blank" 
                 rel="noopener noreferrer" className="certifications-item-title">OCI Data Foundations Associate 2024</a>
             </div>
             <p className="certifications-item-details">Oracle University</p>
+          </div>
+          <div className="certifications-item">
+            <div className="certifications-item-header">
+              <img src={cybersecurity} alt="Certification Logo" className="certifications-item-icon" />
+              <h3 className='subtitle'>Cyber Security | Ongoing</h3>
+            </div>
+            <p className="certifications-item-details">Udemy</p>
           </div>
         </div>
       </div>
