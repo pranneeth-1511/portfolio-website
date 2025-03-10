@@ -27,10 +27,15 @@ const AchievementsSection = () => {
             <p className="achievement-item-description">Received Certificate of Coordination by Capabl for the 2-day Coding Saksham Program '24, handling logistics, team coordination,
                and coordinating industry-led sessions at KPR Institute of Engineering and Technology.</p>
           </div>
+          <div className="achievement-item">
+            <a href={require("../../Assets/PDF/Certificates/RIP'24 NSS.pdf")} target="_blank" 
+              rel="noopener noreferrer" className="subh-title">Rural Immersion Program - NSS</a>
+            <p className="achievement-item-description">Received Certificate  for active participation in Rural Immersion Program 2024 at Kaduvettipalayam Village (Oct 18,2024 - Oct 29,2024).
+                Made active contribution towards community outreach, cultural exchange, and rural development activities, thus creating a positive social contribution.</p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
-
 export default AchievementsSection;
