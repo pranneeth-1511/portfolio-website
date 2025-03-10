@@ -85,7 +85,8 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={OCIDFA} alt="Certification Logo" className="certifications-item-icon" />
-              <h3 className='subtitle'>OCI Data Foundations Associate | Ongoing</h3>
+              <a href={require("../../Assets/PDF/Certificates/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf")} target="_blank" 
+                rel="noopener noreferrer" className="certifications-item-title">OCI Data Foundations Associate 2024</a>
             </div>
             <p className="certifications-item-details">Oracle University</p>
           </div>
