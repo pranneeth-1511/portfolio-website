@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
-import { SpeedInsights } from "@vercel/speed-insights/react";
-import { Analytics } from "@vercel/analytics/react";
 import backgroundImage from './Assets/Background.jpg';
-
 // Import components
 import Navbar from './Pages/navbar/Navbar';
 import HeroSection from './Pages/HeroSection/HeroSection';
@@ -28,9 +25,6 @@ function App() {
         width: "100%",
       }}
     >
-      <SpeedInsights />
-      <Analytics />
-
       <Navbar />
       <HeroSection />
       <EducationSection />
