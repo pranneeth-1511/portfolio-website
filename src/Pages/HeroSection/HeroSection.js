@@ -13,7 +13,7 @@ const HeroSection = () => {
             a culture of creativity and efficiency in the teams I work with.</p>
       </div>
       <div className="hero-content">
-        <a href="https://drive.google.com/file/d/1UZjxu9YHmBG1ERex3oXiw0BCquH43zch/view?usp=sharing" target="_blank" 
+        <a href="https://workdrive.zohopublic.in/external/2d334aa08dea98ddca48fe2bd7ef45b2b0ce98db1c98c233aac70a89f90412d9" target="_blank" 
         rel="noopener noreferrer" className="button-style">Download Resume</a>
       </div>
     </section>
