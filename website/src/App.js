@@ -12,8 +12,6 @@ import ExperienceSection from './Pages/ExperienceSection/ExperienceSection';
 import AchievementsSection from './Pages/AchievementsSection/AchievementsSection';
 import ContactSection from './Pages/ContactSection/ContactSection';
 import Footer from './Pages/Footer/Footer';
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -27,8 +25,6 @@ function App() {
         width: "100%",
       }}
     >
-      <SpeedInsights />
-      <Analytics />
       <Navbar />
       <HeroSection />
       <EducationSection />
