@@ -1,0 +1,173 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.portfolio-link {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio-link:hover {
+  color: purple;
+}
+
+.navbar-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: purple;
+}
+
+/* Dropdown Styles */
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-toggle {
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dropdown-toggle:hover {
+  color: green;
+}
+
+.navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-dropdown-content .navbar-link {
+  padding: 0.5rem 1rem;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-dropdown-content .navbar-link:hover {
+  background-color: #caeff1;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 20px;
+    margin-left: 0%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: auto;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-dropdown {
+    width: 100%;
+    padding-left: 0%;
+  }
+
+  .navbar-dropdown-toggle {
+    width: 80%;
+    text-align: left;
+  }
+
+  .navbar-dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    padding-left: 20px; /* Indent dropdown items */
+  }
+
+  .navbar-dropdown:hover .navbar-dropdown-content {
+    
+    text-align: left;
+    display: block;
+  }
+
+  .navbar-dropdown-content .navbar-link {
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+}
