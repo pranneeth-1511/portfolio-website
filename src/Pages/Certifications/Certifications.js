@@ -86,7 +86,7 @@ const Certifications = () => {
           <div className="certifications-item">
             <div className="certifications-item-header">
               <img src={cybersecurity} alt="Certification Logo" className="certifications-item-icon" />
-              <h3 className='subtitle'>Cyber Security | Ongoing</h3>
+              <h3 className='certifications-item-title'>Cyber Security | Ongoing</h3>
             </div>
             <p className="certifications-item-details">Udemy</p>
           </div>

@@ -1,5 +1,7 @@
 .projects-section {
-  padding: 50px 0;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects-list {
@@ -11,39 +13,40 @@
 }
 
 .project-item {
-  background-color: #caeff1;
+  background-color: transparent;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: grey;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-item:hover {
   transform: scale(1.05);
+  background-color: lightslategray;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-title {
   font-size: 1.4rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-weight: bolder;
+  color: gold;
   margin: 0;
 }
 
 .link-project-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1f2937;
+  color: gold;
   margin: 0;
   text-decoration: underline;
 }
 
 .link-project-title:hover {
-  color: green;
+  color: whitesmoke;
 }
 
 .project-item-description {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: whitesmoke;
   margin-bottom: 12px;
 }
 

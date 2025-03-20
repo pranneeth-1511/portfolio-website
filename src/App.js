@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import backgroundImage from './Assets/Background.jpg';
+import backgroundImage from './Assets/Background-port.jpg';
 // Import components
 import Navbar from './Pages/navbar/Navbar';
 import HeroSection from './Pages/HeroSection/HeroSection';
@@ -20,7 +20,6 @@ function App() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
         minHeight: "100vh",
         width: "100%",
       }}
