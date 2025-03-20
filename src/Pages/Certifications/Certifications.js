@@ -5,7 +5,7 @@ import githubIcon from '../../Assets/github.png';
 import ltIcon from '../../Assets/l&t.png';
 import pythonIcon from '../../Assets/python.png';
 import aiIcon from '../../Assets/ai-for-everyone.png';
-import googleanalytics from '../../Assets/Google-analytics.png';
+import googleanalytics from '../../Assets/analyticsgl.png';
 import cybersecurity from '../../Assets/cyber-security.jpeg';
 import OCIDFA from '../../Assets/OCIDataFoundationsAssociate.png'
 
