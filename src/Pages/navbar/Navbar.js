@@ -23,20 +23,20 @@ const Navbar = () => {
           {/* Qualifications Dropdown */}
           <div className="navbar-dropdown">
             <span className="navbar-dropdown-toggle">Qualifications </span>
-            <div className="navbar-dropdown-content">
-              <a href="#education" className="navbar-link" onClick={toggleNav}>Education</a>
-              <a href="#certifications" className="navbar-link" onClick={toggleNav}>Certifications</a>
-              <a href="#skills" className="navbar-link" onClick={toggleNav}>Skills</a>
+            <div className={`navbar-dropdown-content ${isNavOpen ? 'open' : ''}`}>
+              <a href="#education" className="navbar-link" onClick={toggleNav}>&#8594;Education</a>
+              <a href="#certifications" className="navbar-link" onClick={toggleNav}> &#8594;Certifications</a>
+              <a href="#skills" className="navbar-link" onClick={toggleNav}> &#8594;Skills</a>
             </div>
           </div>
 
           {/* Work Dropdown */}
           <div className="navbar-dropdown">
             <span className="navbar-dropdown-toggle">Work</span>
-            <div className="navbar-dropdown-content">
-              <a href="#projects" className="navbar-link" onClick={toggleNav}>Projects</a>
-              <a href="#experience" className="navbar-link" onClick={toggleNav}>Experience</a>
-              <a href="#achievements" className="navbar-link" onClick={toggleNav}>Achievements</a>
+            <div className={`navbar-dropdown-content ${isNavOpen ? 'open' : ''}`}>
+              <a href="#projects" className="navbar-link" onClick={toggleNav}>&#8594;Projects</a>
+              <a href="#experience" className="navbar-link" onClick={toggleNav}>&#8594;Experience</a>
+              <a href="#achievements" className="navbar-link" onClick={toggleNav}>&#8594;Achievements</a>
             </div>
           </div>
 

@@ -134,6 +134,7 @@
     border-radius: 5px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     width: auto;
+    display: none;
   }
 
   .navbar-links.open {
@@ -158,11 +159,10 @@
     transform: none;
     transition: none;
     padding-left: 20px; /* Indent dropdown items */
+    display: none;
   }
 
-  .navbar-dropdown:hover .navbar-dropdown-content {
-    
-    text-align: left;
+  .navbar-dropdown-content.open {
     display: block;
   }
 
