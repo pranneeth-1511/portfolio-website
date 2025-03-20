@@ -1,6 +1,7 @@
 .education-section {
-  padding: 50px 0;
-  margin-top: 0;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .education-list {
@@ -10,7 +11,7 @@
 }
 
 .education-item {
-  background-color: #caeff1;
+  background-color: grey;
   border-radius: 15px;
   padding: 10px;
   padding-bottom:inherit;
@@ -33,17 +34,20 @@
 .education-item-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1f2937;
+  color: gold;
   margin: 0;
 }
 
 .education-item-details {
   font-size: 1.25rem;
-  color: #4b5563;
+  color: whitesmoke;
 }
 
 /* Tablets (768px to 1024px) */
 @media (max-width: 1024px) {
+  .education-section{
+    max-width: 1024px;
+  }
   .education-list {
       grid-template-columns: repeat(2, 1fr);
   }
@@ -51,6 +55,9 @@
 
 /* Mobile Devices (up to 767px) */
 @media (max-width: 767px) {
+  .education-section{
+    max-width: 760px;
+  }
   .education-list {
       grid-template-columns: 1fr;
   }

@@ -1,79 +1,206 @@
 .about-section {
-    color: #ffffff;
-    padding: 50px 20px;
-    text-align: center;
+  color: #ffffff;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 84vh;
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  color: gold;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: typing 3s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  to {
+    width: 100%;
   }
-  
-  .hero-title {
-    color: #222;
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    align-content: center;
+}
+
+@keyframes blink-cursor {
+  from, to {
+    border-right-color: transparent;
   }
-  
-  .hero-subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
+  50% {
+    border-right-color: gold;
   }
-  
-  .section-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+}
+
+.hero-title::after {
+  content: '';
+  border-right: 2px solid gold;
+  animation: blink-cursor 0.75s step-end infinite;
+  animation-delay: 3s;
+}
+
+.section-description {
+  text-indent: 50px;
+  font-size: 1.4rem;
+  font-style: normal;
+  color: whitesmoke;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button style */
+.button-style {
+  align-items: center;
+  gap: 10px;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+.button-style:hover {
+  background-color: white;
+}
+
+.scroll-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.scroll-icon.hidden {
+  opacity: 0;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid gold;
+  border-radius: 15px;
+  position: relative;
+  animation: mouse-scroll 2s infinite;
+}
+
+.mouse::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: gold;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: wheel-scroll 2s infinite;
+}
+
+.scroll-text {
+  color: gold;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+@keyframes mouse-scroll {
+  0% {
+    transform: translateY(0);
   }
-  
-  .section-title {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 10px;
+  50% {
+    transform: translateY(10px);
   }
-  
-  .section-description {
-    text-indent: 50px;
-    font-size: 1.4rem;
-    font-style: normal;
-    color: black;
-    line-height: 1.5;
-    text-align: justify;
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wheel-scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(20px) translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-icon {
+    bottom: 10px;
   }
 
-  .resume-link {
-    text-decoration: none;
-    align-content: center;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background-color: #0000FF;
-    color: #FFFFFF;
-    border: 1px solid #d1d5db;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    margin: 0 0.5rem;
-  }
-  
-  .resume-link:hover {
-    background-color: green;
-    color: #ffffff;
-    border-color: #3b82f6;
+  .mouse {
+    width: 25px;
+    height: 40px;
   }
 
-  .button-style {
-    align-items: center;
-    gap: 10px;
-    background-color: #0000FF;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    white-space: nowrap;
+  .mouse::before {
+    width: 5px;
+    height: 5px;
   }
-  
-  .button-style:hover {
-    background-color: green;
+
+  .scroll-text {
+    font-size: 0.8rem;
   }
+}
+
+@media (max-width: 480px) {
+  .about-section{
+    margin-top: -50px;
+  }
+  .button-container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .scroll-icon {
+    bottom: -30px;
+  }
+  .mouse {
+    width: 20px;
+    height: 35px;
+  }
+
+  .mouse::before {
+    width: 4px;
+    height: 4px;
+  }
+
+  .scroll-text {
+    font-size: 0.7rem;
+  }
+}

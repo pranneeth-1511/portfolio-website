@@ -1,21 +1,14 @@
 
 .achievements-section {
-  padding: 50px 0px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: left;
 }
 
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.section-title {
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .achievements-list {
@@ -32,18 +25,18 @@
 .subh-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1f2937;
+  color: gold;
   margin-bottom: 10px;
 }
 
 .subh-title:hover {
   font-size: 1.4rem;
   font-weight: 600;
-  color: green;
+  color: white;
   margin-bottom: 10px;
 }
 .achievement-item {
-  background-color: #caeff1;
+  background-color: grey;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -65,19 +58,10 @@
 }
 
 .achievement-item-description {
+  align-items: justify;
   font-size: 1.25rem;
-  color: #555;
+  color: whitesmoke;
   line-height: 1.6;
-}
-
-.connect-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-align: center;
 }
 
 /* Responsive Design */

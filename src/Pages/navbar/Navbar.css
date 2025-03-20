@@ -1,5 +1,5 @@
 .navbar {
-  background-color: white;
+  background-color: black;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
   position: sticky;
@@ -10,7 +10,7 @@
 .portfolio-link {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1f2937;
+  color: gold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -72,7 +72,7 @@
   font-size: 1.4rem;
   background: none;
   border: none;
-  color: black;
+  color: gold;
   cursor: pointer;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -80,7 +80,7 @@
 }
 
 .navbar-dropdown-toggle:hover {
-  color: green;
+  color: whitesmoke;
 }
 
 .navbar-dropdown-content {
@@ -88,7 +88,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -109,17 +109,18 @@
   display: block;
   text-align: left;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navbar-dropdown-content .navbar-link:hover {
-  background-color: #caeff1;
+  color: gold;
 }
 
 /* Mobile Styles */
 @media (max-width: 767px) {
   .navbar-toggle {
     display: block;
+    color: whitesmoke;
   }
 
   .navbar-links {
@@ -129,7 +130,7 @@
     top: 60px; /* Adjust based on navbar height */
     right: 20px;
     margin-left: 0%;
-    background-color: white;
+    background-color: black;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);

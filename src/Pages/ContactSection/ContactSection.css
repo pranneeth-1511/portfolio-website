@@ -1,5 +1,7 @@
 .contact-section {
-  padding: 20px 0;
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-description {
@@ -26,12 +28,22 @@
   flex-wrap: wrap;
 }
 
+.connect-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: gold;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: center;
+} 
 .contact-button {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #0000FF;
-  color: #FFFFFF;
+  background-color: gold;
+  font-weight: 800;
+  color: black;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -40,7 +52,7 @@
 }
 
 .contact-button:hover {
-  background-color: green;
+  background-color: white;
   transform: scale(1.05);
 }
 

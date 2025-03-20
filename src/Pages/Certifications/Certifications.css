@@ -1,15 +1,17 @@
 .certifications-section {
-    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
   }
   
   .certifications-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
   .certifications-item {
-    background-color: #caeff1;
+    background-color: grey;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -38,25 +40,19 @@
   .certifications-item-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #1f2937;
+    color: gold;
     margin: 0;
   }
   
   .certifications-item-title:hover {
-    color: green;
+    color: whitesmoke;
   }
   
   .certifications-item-details {
     font-size: 1.25rem;
-    color: #4b5563;
+    color: whitesmoke;
   }
-  
-  .subtitle{
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin: 0;
-  }
+
   /* Mobile Devices (up to 767px) */
   @media (max-width: 767px) {
     .certifications-list {

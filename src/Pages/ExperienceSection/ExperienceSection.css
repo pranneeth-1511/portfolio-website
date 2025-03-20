@@ -1,5 +1,7 @@
 .experience-section {
-    padding: 50px 0;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   .experience-section .section-content {
@@ -8,24 +10,14 @@
     padding: 0 20px;
   }
   
-  .experience-section .section-title {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-align: left;
-  }
-  
   .experience-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
   
   .experience-item {
-    background-color: #caeff1;
+    background-color: grey;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -40,22 +32,17 @@
   .experience-sub-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #1f2937;
+    color: gold;
     margin: 0;
   }
-  .sub-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin: 0;
-  }
+  
   .experience-sub-title:hover {
-    color: green;
+    color: white;
   }
   
   .experience-item-description {
     font-size: 1.25rem;
-    color: #4b5563;
+    color: whitesmoke;
     line-height: 1;
     text-align: justify;
   }
@@ -68,4 +55,17 @@
   
   .task-list li {
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 767px) {
+    .experience-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Tablet Devices (768px to 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .experience-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
