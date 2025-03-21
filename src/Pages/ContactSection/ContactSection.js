@@ -11,7 +11,7 @@ const ContactSection = () => {
       <div className="section-content">
         <p className="connect-title">Let's collaborate and build something amazing! Reach out to me</p>
         <div className="contact-buttons">
-          <a href="mailto:contact@pranneethdk.com" className="contact-button" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:work@pranneethdk.com" className="contact-button" target="_blank" rel="noopener noreferrer">
             <img src={mailIcon} alt="Mail Icon" className="contact-icon" />
             <span>Mail Me</span>
           </a>
