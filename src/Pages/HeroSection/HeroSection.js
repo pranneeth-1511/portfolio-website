@@ -33,7 +33,7 @@ const HeroSection = () => {
 
       {/* Button container */}
       <div className="button-container">
-        <a href="https://drive.google.com/file/d/19u-ez1QYjuB1CI8LMPlit9rhUcVZLGu_/view?usp=sharing"
+        <a href="https://workdrive.zohopublic.in/external/5aaaabd2106ca87802bc9e14235e9e9bfdf8e4ad41c6c66762d181549ecb6871"
           target="_blank"
           rel="noopener noreferrer"
           className="button-style" >
