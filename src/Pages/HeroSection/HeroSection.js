@@ -45,7 +45,7 @@ const HeroSection = () => {
           className="button-style" >
             <b>Hire Me</b></a>
       </div>
-
+      
       {/* Scroll icon with fade-out effect */}
       <div className={`scroll-icon ${isScrolled ? 'hidden' : ''}`}>
         <div className="mouse"></div>

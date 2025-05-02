@@ -3,6 +3,8 @@ import mailIcon from '../../Assets/mail-icon.png';
 import linkedinIcon from '../../Assets/linkedin-icon.png';
 import githubIcon from '../../Assets/github.png';
 import instagram from '../../Assets/instagram-icon.png';
+import hackerrank from '../../Assets/icons/hackerrank.png';
+import leetcode from '../../Assets/icons/leetcode.png';
 import './ContactSection.css';
 
 const ContactSection = () => {
@@ -26,6 +28,14 @@ const ContactSection = () => {
           <a href="https://www.instagram.com/pranneeth_1511/" className="contact-button" target="_blank" rel="noopener noreferrer">
             <img src={instagram} alt="Instagram Icon" className="contact-icon" />
             <span>Instagram</span>
+          </a>
+          <a href="https://leetcode.com/u/pranneethdk/" className="contact-button" target="_blank" rel="noopener noreferrer">
+            <img src={leetcode} alt="Instagram Icon" className="contact-icon" />
+            <span>LeetCode</span>
+          </a>
+          <a href="https://www.hackerrank.com/profile/pranneethdk" className="contact-button" target="_blank" rel="noopener noreferrer">
+            <img src={hackerrank} alt="Instagram Icon" className="contact-icon" />
+            <span>Hacker Rank</span>
           </a>
         </div>
       </div>
