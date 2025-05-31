@@ -137,7 +137,7 @@ const Projects: React.FC = () => {
                   <img
                     src={images[currentIndex]}
                     alt={`${project.title} screenshot ${currentIndex + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                   />
                   {images.length > 1 && (
                     <>
