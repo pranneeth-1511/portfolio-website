@@ -5,9 +5,15 @@ import { FiExternalLink } from 'react-icons/fi';
 
 import TECHFUSIONX_PDF from '../../Assets/PDF/Certificates/Event/Capabl Hackathon.pdf';
 import RIP_NSS from '../../Assets/PDF/Certificates/Event/RIP_2K24 NSS.pdf';
+import AURC_PDF from '../../Assets/PDF/Certificates/Event/Anna University regional Campus_CBE.pdf'
+import BIT_SATHY from '../../Assets/PDF/Certificates/Event/BIT - Sathyamangalam.pdf';
+import NIT_DS from '../../Assets/PDF/Certificates/Event/Workshop NIT (Data structure & Algorithms).pdf';
 
 import TECHFUSIONX_IMG from '../../Assets/Certificate-Logos-Badges/Capabl Hackathon.png';
 import RIP_NSS_IMG from '../../Assets/Certificate-Logos-Badges/RIP_2K24 NSS.png';
+import AURC_IMG from '../../Assets/Certificate-Logos-Badges/Anna University regional Campus_CBE.png'
+import BIT_SATHY_IMG from '../../Assets/Certificate-Logos-Badges/BIT - Sathyamangalam.png';
+import NIT_DS_IMG from '../../Assets/Certificate-Logos-Badges/Workshop NIT (Data structure & Algorithms).png';
 
 interface AdditionalCertificate {
   id: number;
@@ -29,27 +35,6 @@ const AdditionalCertificates: React.FC = () => {
   const additionalCertificates: AdditionalCertificate[] = [
     {
       id: 1,
-      title: 'HackXelerate-25 TechLead',
-      description:
-        'Selected as the Tech Lead for HackXelerate-25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.',
-      tags: ['EVENT'],
-    },
-    {
-      id: 2,
-      title: 'TechfusionX Coordinator',
-      description:
-        'Received Certificate of Coordination by Capabl for the 2-day Coding Saksham Program 2024, handling logistics, team coordination, and coordinating industry-led sessions at KPR Institute of Engineering and Technology.',
-      tags: ['EVENT'],
-    },
-    {
-      id: 3,
-      title: 'TechLead, CSBS Department Association (2024)',
-      description:
-        'Selected as the TechLead of the Computer Science and Business Systems (CSBS) Department Association, responsible for leading initiatives and coordinating events.',
-      tags: ['ASSOCIATION'],
-    },
-    {
-      id: 4,
       title: 'Rural Immersion Program - NSS',
       description:
         'Received Certificate for active participation in Rural Immersion Program 2024 at Kaduvettipalayam Village (Oct 18,2024 - Oct 29,2024). Made active contribution towards community outreach, cultural exchange, and rural development activities.',
@@ -58,13 +43,62 @@ const AdditionalCertificates: React.FC = () => {
       certLink: RIP_NSS,
     },
     {
+      id: 2,
+      title: 'TechfusionX Coordinator',
+      description:
+        'Received Certificate of Coordination by Capabl for the 2-day Coding Saksham Program 2024, handling logistics, team coordination, and coordinating industry-led sessions at KPR Institute of Engineering and Technology.',
+      tags: ['EVENT'],
+      image: TECHFUSIONX_IMG,
+      certLink: TECHFUSIONX_PDF,
+    },
+    {
+      id: 3,
+      title: 'HackXelerate-25 TechLead',
+      description:
+        'Selected as the Tech Lead for HackXelerate-25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.',
+      tags: ['EVENT'],
+    },
+    {
+      id: 4,
+      title: 'GENIO-2K23',
+      description:
+        'National Level Technical Symposium - Events Prticipated: CODERS UNITE, TECH SPRINT, CLASH OF LOGOS',
+      tags: ['EVENT'],
+      image: AURC_IMG,
+      certLink: AURC_PDF,
+    },
+    {
       id: 5,
+      title: 'ERSMERONZ-24',
+      description:
+        'National Level Techno Fest - Prezentare-24',
+      tags: ['EVENT'],
+      image: BIT_SATHY_IMG,
+      certLink: BIT_SATHY,
+    },
+    {
+      id: 6,
+      title: 'Data Structures & Algorithm',
+      description:
+        'Workshop conducted by GeeksforGeeks - DATA STRUCTURES & ALGORITHMS',
+      tags: ['WORKSHOP','EVENT'],
+      image: NIT_DS_IMG,
+      certLink: NIT_DS,
+    },
+
+    {
+      id: 7,
       title: 'Hackfest 2024 Coordinator',
       description:
         'Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.',
       tags: ['EVENT'],
-      image: TECHFUSIONX_IMG,
-      certLink: TECHFUSIONX_PDF,
+    },
+    {
+      id: 8,
+      title: 'TechLead, CSBS Department Association (2024)',
+      description:
+        'Selected as the TechLead of the Computer Science and Business Systems (CSBS) Department Association, responsible for leading initiatives and coordinating events.',
+      tags: ['ASSOCIATION'],
     },
   ];
 
@@ -103,7 +137,7 @@ const AdditionalCertificates: React.FC = () => {
           className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Additional Certifications / Volunteering Certification
+            Event Certifications / Volunteering Certification
           </h2>
         </motion.div>
 
@@ -128,7 +162,7 @@ const AdditionalCertificates: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 gap-8"
         >
           {filteredCertificates.map((cert) => (
             <motion.div key={cert.id} variants={itemVariants} className="card overflow-hidden">
