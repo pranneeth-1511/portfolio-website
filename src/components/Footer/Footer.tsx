@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="text-center md:text-right">
             <p className="text-gray-600 dark:text-gray-400">
-              © {currentYear} Pranneeth D K. All rights reserved.
+              © 2023 - {currentYear} Pranneeth D K. All rights reserved.
             </p>
           </div>
         </div>
