@@ -9,20 +9,22 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Certifications from './components/Certifications/Certifications';
 import ParticleBackground from './components/ParticleBackground/ParticleBackground';
+import AdditionalCertificates from './components/AdditionalCertificate/Additional_Certificate';
 
 function App() {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    // Check user preference
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    }
-
-    // Check localStorage
+    // Check localStorage first for theme preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setTheme(savedTheme);
+      return;
+    }
+    
+    // If no saved theme, check system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
     }
   }, []);
 
@@ -48,6 +50,7 @@ function App() {
         <About />
         <Projects />
         <Certifications />
+        <AdditionalCertificates />
         <Skills />
         <Experience />
         <Contact />
