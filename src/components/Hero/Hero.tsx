@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
               sequence={[
                 'Frontend Developer',
                 1000,
-                'Cloud Computing & DevOps',
+                'Cloud Computing & DevOps Engineer',
                 1000,
                 'Networking & System Administration',
                 1000,
