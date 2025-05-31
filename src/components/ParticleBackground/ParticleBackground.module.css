@@ -1,0 +1,4 @@
+/* Particle background specific styles */
+.canvas {
+  @apply fixed top-0 left-0 w-full h-full -z-10 opacity-50;
+}

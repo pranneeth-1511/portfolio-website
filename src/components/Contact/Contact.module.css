@@ -1,0 +1,20 @@
+/* Contact specific styles */
+.contactContainer {
+  @apply section-spacing bg-gray-50 dark:bg-gray-900/50;
+}
+
+.infoCard {
+  @apply card p-8 h-full;
+}
+
+.iconBox {
+  @apply w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 mr-4;
+}
+
+.formInput {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500;
+}
+
+.submitButton {
+  @apply btn-primary w-full flex justify-center items-center;
+}

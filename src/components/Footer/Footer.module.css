@@ -1,0 +1,16 @@
+/* Footer specific styles */
+.footerContainer {
+  @apply bg-white dark:bg-gray-800 py-8 border-t border-gray-200 dark:border-gray-700;
+}
+
+.logo {
+  @apply text-2xl font-bold gradient-text;
+}
+
+.madeWith {
+  @apply text-gray-600 dark:text-gray-400 mb-2 flex items-center justify-center md:justify-end;
+}
+
+.copyright {
+  @apply text-gray-600 dark:text-gray-400;
+}

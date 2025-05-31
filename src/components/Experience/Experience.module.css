@@ -1,0 +1,16 @@
+/* Experience specific styles */
+.timelineLine {
+  @apply absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-primary-200 dark:bg-primary-900 transform md:-translate-x-1/2;
+}
+
+.timelineItem {
+  @apply relative flex flex-col md:flex-row mb-12;
+}
+
+.timelineMarker {
+  @apply absolute top-6 w-8 h-8 rounded-full flex items-center justify-center text-white;
+}
+
+.dateTag {
+  @apply inline-block px-3 py-1 text-sm rounded-full mb-3 bg-gray-100 dark:bg-gray-700;
+}

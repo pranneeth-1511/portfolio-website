@@ -1,0 +1,16 @@
+/* Skills specific styles */
+.skillsContainer {
+  @apply section-spacing bg-gray-50 dark:bg-gray-900/50;
+}
+
+.skillCard {
+  @apply card p-6;
+}
+
+.skillBar {
+  @apply h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+}
+
+.techBadge {
+  @apply px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300;
+}
