@@ -53,7 +53,7 @@ const Experience: React.FC = () => {
       id: 3,
       title: 'Bachelor of Technology in Computer Science and Business Systems',
       company: 'KPR Institute of Engineering and Technology',
-      period: '2022 - 2024',
+      period: '2022 - 2026',
       description:'CGPA: 7.1',
       type: 'education',
     },

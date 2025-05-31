@@ -11,13 +11,10 @@ const Footer: React.FC = () => {
             <a href="#home" className="text-2xl font-bold gradient-text">
               Pranneeth D K
             </a>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">
-              Creating beautiful digital experiences.
-            </p>
           </div>
           <div className="text-center md:text-right">
             <p className="text-gray-600 dark:text-gray-400">
-              © 2023 - {currentYear} Pranneeth D K. All rights reserved.
+              © 2023 - {currentYear}. All rights reserved.
             </p>
           </div>
         </div>

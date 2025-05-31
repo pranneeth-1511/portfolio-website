@@ -16,10 +16,10 @@ const Skills: React.FC = () => {
 
   const frontendSkills: Skill[] = [
     { name: 'TypeScript', level: 80, color: 'bg-primary-500' },
-    { name: 'HTML & CSS', level: 30, color: 'bg-secondary-600' },
-    { name: 'React', level: 60, color: 'bg-accent-500' },
-    { name: 'JavaScript', level: 50, color: 'bg-secondary-500' },    
     { name: 'Tailwind CSS', level: 70, color: 'bg-secondary-600' },
+    { name: 'React', level: 60, color: 'bg-accent-500' },
+    { name: 'HTML & CSS', level: 30, color: 'bg-secondary-600' },
+    { name: 'JavaScript', level: 30, color: 'bg-secondary-500' },    
   ];
 
   const backendSkills: Skill[] = [
@@ -28,8 +28,8 @@ const Skills: React.FC = () => {
   ];
 
   const technicalSkills: Skill[] = [
-    { name: 'Java', level: 60, color: 'bg-primary-500' },
-    { name: 'Python', level: 80, color: 'bg-secondary-500' },
+    { name: 'Java', level: 80, color: 'bg-primary-500' },
+    { name: 'Python', level: 60, color: 'bg-secondary-500' },
   ];
 
   const otherSkills: Skill[] = [
@@ -149,7 +149,6 @@ const Skills: React.FC = () => {
               <SkillBar key={skill.name} skill={skill} />
             ))}
           </motion.div>
-
         </div>
 
         <motion.div
@@ -166,14 +165,13 @@ const Skills: React.FC = () => {
               'Node.js',
               'Tailwind CSS',
               'Supabase',
-              'SQL',
               'Java',
               'Python',
               'Autodesk Fusion 360',
               'Git & Github',
-              'AWS',
+              'AWS-EC2',
               'CI/CD Pipelines',
-              'unix/Linux Environment',
+              'Unix/Linux Environment',
               'Appsheet (Low-code Platform)',
             ].map((tech) => (
               <div
