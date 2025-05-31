@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiExternalLink } from 'react-icons/fi';
@@ -24,6 +24,8 @@ const AdditionalCertificates: React.FC = () => {
     threshold: 0.1,
   });
 
+  const [activeTag, setActiveTag] = useState<string>('ALL');
+
   const additionalCertificates: AdditionalCertificate[] = [
     {
       id: 1,
@@ -45,7 +47,6 @@ const AdditionalCertificates: React.FC = () => {
       description:
         'Selected as the TechLead of the Computer Science and Business Systems (CSBS) Department Association, responsible for leading initiatives and coordinating events.',
       tags: ['ASSOCIATION'],
-      
     },
     {
       id: 4,
@@ -57,7 +58,7 @@ const AdditionalCertificates: React.FC = () => {
       certLink: RIP_NSS,
     },
     {
-      id: 4,
+      id: 5,
       title: 'Hackfest 2024 Coordinator',
       description:
         'Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.',
@@ -65,8 +66,14 @@ const AdditionalCertificates: React.FC = () => {
       image: TECHFUSIONX_IMG,
       certLink: TECHFUSIONX_PDF,
     },
-    
   ];
+
+  const allTags = ['ALL', ...new Set(additionalCertificates.flatMap(cert => cert.tags))];
+
+  const filteredCertificates =
+    activeTag === 'ALL'
+      ? additionalCertificates
+      : additionalCertificates.filter(cert => cert.tags.includes(activeTag));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -93,10 +100,29 @@ const AdditionalCertificates: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Additional Certifications</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Additional Certifications / Volunteering Certification
+          </h2>
         </motion.div>
+
+        {/* Tag Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {allTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setActiveTag(tag)}
+              className={`px-4 py-2 rounded-full text-sm font-medium border ${
+                activeTag === tag
+                  ? 'bg-primary-600 text-white'
+                  : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
 
         <motion.div
           variants={containerVariants}
@@ -104,7 +130,7 @@ const AdditionalCertificates: React.FC = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {additionalCertificates.map((cert) => (
+          {filteredCertificates.map((cert) => (
             <motion.div key={cert.id} variants={itemVariants} className="card overflow-hidden">
               {cert.image && (
                 <div className="relative w-full overflow-hidden">

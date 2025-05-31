@@ -1,14 +1,15 @@
 /* Certifications specific styles */
+
 .projectCard {
   @apply card overflow-hidden;
 }
 
 .imageWrapper {
-  @apply relative h-64 overflow-hidden;
+  @apply relative w-full overflow-hidden;
 }
 
 .projectImage {
-  @apply w-full h-full object-cover transition-transform duration-500 hover:scale-110;
+  @apply w-full h-auto object-contain transition-transform duration-500 hover:scale-105;
 }
 
 .tag {
@@ -16,9 +17,17 @@
 }
 
 .link {
-  @apply flex items-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400;
+  @apply inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline;
 }
 
 .filterButton {
-  @apply px-5 py-2 rounded-full transition-all duration-300;
+  @apply px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300;
+}
+
+.filterButton-active {
+  @apply bg-primary-600 text-white;
+}
+
+.filterButton-inactive {
+  @apply bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200;
 }
