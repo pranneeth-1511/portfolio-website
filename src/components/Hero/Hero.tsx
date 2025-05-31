@@ -36,9 +36,9 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 "
           >
-            Hi, I'm <span className="gradient-text">Pranneeth D K</span>
+            Hi, I'm <span className="gradient-text whitespace-nowrap">Pranneeth D K</span>
           </motion.h1>
 
           <motion.div
