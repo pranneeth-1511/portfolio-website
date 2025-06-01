@@ -11,7 +11,6 @@ import PYTHON_PDF from '../../Assets/PDF/Certificates/course/Python Basics Certi
 import GOOGLE_ANALYTICS_PDF from '../../Assets/PDF/Certificates/course/Google Analytics.pdf';
 import OCI_DFA_PDF from '../../Assets/PDF/Certificates/course/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf';
 
-
 import AI_IMG from "../../Assets/Certificate-Logos-Badges/AI_IMG.jpg";
 import GITHUB_IMG from '../../Assets/Certificate-Logos-Badges/GITHUB.png';
 import ENGINEERING_GRAPHICS_IMG from '../../Assets/Certificate-Logos-Badges/ENGINEERING_GRAPHICS.png';
@@ -35,80 +34,81 @@ const Certifications: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [activeFilter, setActiveFilter] = useState('All');
+  // 🔧 Ensure 'ALL' is the default selected filter
+  const [activeFilter, setActiveFilter] = useState('ALL');
 
   const certifications: Certification[] = [
     {
-     id: 1,
-     title: 'GitHub Foundations',
-     description:
-       'Learned the core functionalities of GitHub including repositories, branching, pull requests, and collaborative development workflows.',
-     tags: ['Version Control' , 'Software Tools'],
-     image: GITHUB_IMG,
-     certLink: GITHUB_PDF,
+      id: 1,
+      title: 'GitHub Foundations',
+      description:
+        'Learned the core functionalities of GitHub including repositories, branching, pull requests, and collaborative development workflows.',
+      tags: ['Version Control', 'Software Tools'],
+      image: GITHUB_IMG,
+      certLink: GITHUB_PDF,
     },
-   {
-     id: 2,
-     title: 'Engineering Graphics & Design',
-     description:
-       'Gained knowledge in technical drawing, orthographic projections, and CAD tools used for visualizing and designing engineering components.',
-     tags: ['Design'],
-     image: ENGINEERING_GRAPHICS_IMG,
-     certLink: ENGINEERING_GRAPHICS_PDF,
-   },
-   {
-     id: 3,
-     title: 'IT Primer',
-     description:
-       'Covered the basics of information technology including networking, computer systems, and foundational IT concepts.',
-     tags: ['Information Technology' , 'Networking'],
-     image: IT_PRIMER_IMG,
-     certLink: IT_PRIMER_PDF,
-   },
-   {
-     id: 4,
-     title: 'Python For Beginners',
-     description:
-       'Learned the fundamentals of Python programming including syntax, data structures, functions, and control flow.',
-     tags: ['Programming' , 'Software Tools'],
-     image: PYTHON_IMG,
-     certLink: PYTHON_PDF,
-   },
-   {
-     id: 5,
-     title: 'AI For Everyone',
-     description:
-       'An introductory course by Andrew Ng explaining how AI works, its real-world applications, and its societal impact.',
-     tags: ['Artificial Intelligence' , 'Information Technology'],
-     image: AI_IMG,
-     certLink: AI_PDF,
-   },
-   {
-     id: 6,
-     title: 'Google Analytics',
-     description:
-       'Explored website data tracking, user behavior analysis, traffic sources, and reporting using Google Analytics tools.',
-     tags: ['Data Analysis' , 'Software Tools'],
-     image: GOOGLE_ANALYTICS_IMG,
-     certLink: GOOGLE_ANALYTICS_PDF,
-   },
-   {
-     id: 7,
-     title: 'OCI Data Foundations Associate 2024',
-     description:
-       'Earned Oracle’s foundational certification covering cloud concepts, data management, and Oracle Cloud Infrastructure services.',
-     tags: ['Cloud Computing' , 'Data Analysis'],
-     image: OCI_DFA_IMG,
-     certLink: OCI_DFA_PDF,
-   },
+    {
+      id: 2,
+      title: 'Engineering Graphics & Design',
+      description:
+        'Gained knowledge in technical drawing, orthographic projections, and CAD tools used for visualizing and designing engineering components.',
+      tags: ['Design'],
+      image: ENGINEERING_GRAPHICS_IMG,
+      certLink: ENGINEERING_GRAPHICS_PDF,
+    },
+    {
+      id: 3,
+      title: 'IT Primer',
+      description:
+        'Covered the basics of information technology including networking, computer systems, and foundational IT concepts.',
+      tags: ['Information Technology', 'Networking'],
+      image: IT_PRIMER_IMG,
+      certLink: IT_PRIMER_PDF,
+    },
+    {
+      id: 4,
+      title: 'Python For Beginners',
+      description:
+        'Learned the fundamentals of Python programming including syntax, data structures, functions, and control flow.',
+      tags: ['Programming', 'Software Tools'],
+      image: PYTHON_IMG,
+      certLink: PYTHON_PDF,
+    },
+    {
+      id: 5,
+      title: 'AI For Everyone',
+      description:
+        'An introductory course by Andrew Ng explaining how AI works, its real-world applications, and its societal impact.',
+      tags: ['Artificial Intelligence', 'Information Technology'],
+      image: AI_IMG,
+      certLink: AI_PDF,
+    },
+    {
+      id: 6,
+      title: 'Google Analytics',
+      description:
+        'Explored website data tracking, user behavior analysis, traffic sources, and reporting using Google Analytics tools.',
+      tags: ['Data Analysis', 'Software Tools'],
+      image: GOOGLE_ANALYTICS_IMG,
+      certLink: GOOGLE_ANALYTICS_PDF,
+    },
+    {
+      id: 7,
+      title: 'OCI Data Foundations Associate 2024',
+      description:
+        'Earned Oracle’s foundational certification covering cloud concepts, data management, and Oracle Cloud Infrastructure services.',
+      tags: ['Cloud Computing', 'Data Analysis'],
+      image: OCI_DFA_IMG,
+      certLink: OCI_DFA_PDF,
+    },
   ];
 
   const filters = ['ALL', ...new Set(certifications.flatMap(cert => cert.tags))];
 
   const filteredCertifications =
-  activeFilter === 'ALL'
-    ? certifications
-    : certifications.filter(cert => cert.tags.includes(activeFilter));
+    activeFilter === 'ALL'
+      ? certifications
+      : certifications.filter(cert => cert.tags.includes(activeFilter));
 
   const containerVariants = {
     hidden: { opacity: 0 },
