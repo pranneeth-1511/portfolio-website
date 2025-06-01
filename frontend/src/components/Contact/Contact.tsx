@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { MapPin, Mail } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 import { Github, Linkedin, Instagram } from 'lucide-react';
 import hackerrank from '../../Assets/icons/hackerrank.png';
 import leetcode from '../../Assets/icons/leetcode.png';
@@ -50,7 +50,10 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="section-spacing bg-gray-50 dark:bg-gray-900/50 min-h-screen flex items-center justify-center">
+    <section
+      id="contact"
+      className="section-spacing bg-gray-50 dark:bg-gray-900/50 min-h-screen flex items-center justify-center"
+    >
       <div className="container-padding mx-auto w-full max-w-4xl">
         {/* Top Section */}
         <motion.div
@@ -68,8 +71,8 @@ const Contact: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Centered Contact Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-1 justify-center items-center">
+        {/* Contact Info Card */}
+        <div className="grid grid-cols-1 justify-center items-center">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -79,22 +82,28 @@ const Contact: React.FC = () => {
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               {/* Location */}
-              <motion.div variants={itemVariants} className="flex items-start justify-center text-left">
-                <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 mr-4">
+              <motion.div
+                variants={itemVariants}
+                className="flex items-center justify-start space-x-4 max-w-md mx-auto"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
                   <MapPin />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium mb-1">Location</h4>
                   <p className="text-gray-600 dark:text-gray-400">Namakkal, Tamil Nadu, India</p>
                 </div>
               </motion.div>
 
               {/* Email */}
-              <motion.div variants={itemVariants} className="flex items-start justify-center text-left">
-                <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 mr-4">
+              <motion.div
+                variants={itemVariants}
+                className="flex items-center justify-start space-x-4 max-w-md mx-auto"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
                   <Mail />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-medium mb-1">Email</h4>
                   <a
                     href="mailto:mail@pranneethdk.com"
@@ -104,6 +113,27 @@ const Contact: React.FC = () => {
                   </a>
                 </div>
               </motion.div>
+              {/* Contact Number
+
+              <motion.div
+                variants={itemVariants}
+                className="flex items-center justify-start space-x-4 max-w-md mx-auto"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                  <Phone />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-medium mb-1">Contact Number</h4>
+                  <a
+                    href="tel:+916379560034"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
+                  >
+                    +91 63795-60034
+                  </a>
+                </div>
+              </motion.div>
+               */}
+               
             </div>
 
             {/* Social Links */}
