@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { MapPin, Mail, Phone } from 'lucide-react';
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { MapPin, Mail, Phone, Github, Linkedin, Instagram } from 'lucide-react';
 import hackerrank from '../../Assets/icons/hackerrank.png';
 import leetcode from '../../Assets/icons/leetcode.png';
 
@@ -133,7 +132,7 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
                */}
-               
+
             </div>
 
             {/* Social Links */}
