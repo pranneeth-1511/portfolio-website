@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github } from 'lucide-react';
 
+// Import images
 import wheelchair from "../../Assets/Images/WheelChair.jpg";
-
 import ecommerce_ADMMIN from "../../Assets/Images/E_Commerce/admin page.png";
 import ecommerce_HOME from "../../Assets/Images/E_Commerce/Home Page.png";
 import ecommerce_PRDMNG from "../../Assets/Images/E_Commerce/Product manage - admin.png";
@@ -25,8 +25,6 @@ interface Project {
 const Projects: React.FC = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [activeFilter, setActiveFilter] = useState('All');
-
-  // Track current image index per project
   const [imageIndexes, setImageIndexes] = useState<Record<number, number>>({});
 
   const handleNextImage = (projectId: number, imageCount: number) => {
@@ -48,23 +46,31 @@ const Projects: React.FC = () => {
       id: 1,
       title: 'E-Commerce platform without intermediaries',
       description:
-        'developed and built a decentralized e-commerce platform that allows for peer-to-peer transactions to take place directly without the need for middlemen. committed to developing a smooth, user-friendly interface with safe payments and trust based on smart contracts. created end-to-end features to facilitate marketplace scalability and user ownership.',
+        'Developed a decentralized e-commerce platform for peer-to-peer transactions without middlemen. Features include a user-friendly interface, secure smart-contract-based payments, and scalable architecture.',
       tags: ['React', 'Node.js', 'Supabase'],
-      image: [ecommerce_ADMMIN,ecommerce_HOME,ecommerce_PRDMNG,ecommerce_PRD_PAGE,ecommerce_SIGNUP,ecommerce_SM_AD,ecommerce_UM_ADMIN,],
+      image: [
+        ecommerce_ADMMIN,
+        ecommerce_HOME,
+        ecommerce_PRDMNG,
+        ecommerce_PRD_PAGE,
+        ecommerce_SIGNUP,
+        ecommerce_SM_AD,
+        ecommerce_UM_ADMIN,
+      ],
       githubLink: 'https://github.com/pranneeth-1511/E-commerce-Website',
     },
     {
       id: 2,
       title: 'Smart wheelchair',
       description:
-        'IoT-enabled wheelchair software with GUI controls, joystick input, and mobile app integration.',
+        'IoT-enabled wheelchair with GUI, joystick input, and mobile app integration. Designed to aid mobility and accessibility for users.',
       tags: ['Python', 'Tkinter'],
       image: wheelchair,
       githubLink: 'https://github.com/pranneeth-1511/Smart-Wheel-Chair',
     },
   ];
 
-  const filters = ['All', 'React', 'Python', 'Supabase', 'Node.js', 'Tkinter'];
+  const filters = ['All', ...new Set(projects.flatMap(project => project.tags))];
 
   const filteredProjects =
     activeFilter === 'All'
@@ -105,6 +111,7 @@ const Projects: React.FC = () => {
             Explore my latest work and projects that showcase my skills and expertise in web development and design.
           </p>
         </motion.div>
+
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {filters.map((filter) => (
@@ -121,7 +128,8 @@ const Projects: React.FC = () => {
             </button>
           ))}
         </div>
-        {/* Projects */}
+
+        {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -132,7 +140,12 @@ const Projects: React.FC = () => {
             const images = Array.isArray(project.image) ? project.image : [project.image];
             const currentIndex = imageIndexes[project.id] ?? 0;
             return (
-              <motion.div key={project.id} variants={itemVariants} className="card overflow-hidden shadow-lg rounded-lg">
+              <motion.div
+                key={project.id}
+                variants={itemVariants}
+                className="card overflow-hidden shadow-lg rounded-lg"
+              >
+                {/* Image Carousel */}
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={images[currentIndex]}
@@ -143,19 +156,26 @@ const Projects: React.FC = () => {
                     <>
                       <button
                         onClick={() => handlePrevImage(project.id, images.length)}
+                        aria-label="Previous image"
                         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full hover:bg-opacity-60"
                       >
                         ‹
                       </button>
                       <button
                         onClick={() => handleNextImage(project.id, images.length)}
+                        aria-label="Next image"
                         className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full hover:bg-opacity-60"
                       >
                         ›
                       </button>
+                      <div className="absolute bottom-2 right-2 text-white text-xs bg-black bg-opacity-50 px-2 py-1 rounded">
+                        {currentIndex + 1} / {images.length}
+                      </div>
                     </>
                   )}
                 </div>
+
+                {/* Project Info */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
