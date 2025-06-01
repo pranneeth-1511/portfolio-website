@@ -1,0 +1,29 @@
+.projectCard {
+  @apply card overflow-hidden shadow-lg rounded-lg;
+}
+
+.imageWrapper {
+  @apply relative h-64 overflow-hidden;
+}
+
+.projectImage {
+  @apply w-full h-auto object-cover transition-transform duration-500 hover:scale-105;
+}
+
+.tag {
+  @apply px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full;
+}
+
+.link {
+  @apply inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400;
+}
+
+.filterButton {
+  @apply px-5 py-2 rounded-full transition-all duration-300;
+}
+.filterButton-active {
+  @apply bg-primary-600 text-white shadow-md;
+}
+.filterButton-inactive {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700;
+}
