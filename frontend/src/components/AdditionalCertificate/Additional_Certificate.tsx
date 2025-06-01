@@ -137,7 +137,7 @@ const AdditionalCertificates: React.FC = () => {
           className="text-center mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Event Certifications / Volunteering Certification
+            Event Participation & Volunteering Certificates
           </h2>
         </motion.div>
 
