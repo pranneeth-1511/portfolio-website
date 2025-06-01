@@ -202,7 +202,13 @@ return (
             </div>
           </div>
         </motion.div>
-        {/* Contact Form */}
+          <div className="card p-8 flex items-center justify-center min-h-[300px]">
+            <h1 className="text-2xl font-bold text-center">
+              Contact form coming soon. Feel free to reach out via{' '}
+              <strong>LinkedIn/email</strong> in the meantime.
+            </h1>
+          </div>
+        {/* Contact Form 
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -302,7 +308,7 @@ return (
               </motion.div>
             </form>
           </div>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </div>
   </section>
