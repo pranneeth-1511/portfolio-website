@@ -10,6 +10,10 @@ import Footer from './components/Footer/Footer';
 import Certifications from './components/Certifications/Certifications';
 import ParticleBackground from './components/ParticleBackground/ParticleBackground';
 import AdditionalCertificates from './components/AdditionalCertificate/Additional_Certificate';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
+
+
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -46,6 +50,8 @@ function App() {
       <ParticleBackground />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
+        <SpeedInsights />
+        <Analytics />
         <Hero />
         <About />
         <Projects />
