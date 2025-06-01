@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun, GithubIcon, Linkedin, Instagram } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface NavbarProps {
   theme: string;
@@ -13,15 +13,9 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Scroll background logic
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -46,22 +40,20 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      transition={{ duration: 0.4 }}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md' : 'bg-transparent'
       }`}
     >
-      <div className="container-padding mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex-shrink-0">
-            <a href="https://pranneethdk.com" className="text-2xl font-bold gradient-text">
-              Pranneeth D K
-              
-            </a>
-          </div>
+          {/* Logo */}
+          <a href="#home" className="text-2xl font-bold gradient-text">
+            Pranneeth D K
+          </a>
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="nav-link">
                 {link.name}
@@ -69,10 +61,11 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             ))}
           </nav>
 
+          {/* Desktop Social Icons & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((link) => (
-            <div key={link.name} className="relative group">
               <a
+                key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,11 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               >
                 {link.icon}
               </a>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs rounded bg-transparent text-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                <strong>{link.name}</strong>
-              </div>
-            </div>
-          ))}
+            ))}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
@@ -95,8 +84,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             </button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="flex md:hidden items-center space-x-4">
+          {/* Mobile Buttons: Theme Toggle & Menu */}
+          <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
@@ -106,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             </button>
             <button
               onClick={toggleMenu}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+              className="text-gray-700 dark:text-gray-300"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -116,42 +105,44 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden bg-white dark:bg-gray-900 shadow-lg"
-        >
-          <div className="container-padding py-4 space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block py-2 nav-link"
-                onClick={toggleMenu}
-              >
-                {link.name}
-              </a>
-            ))}
-            <div className="flex space-x-4 pt-4 border-t dark:border-gray-800">
-              {socialLinks.map((link) => (
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-white dark:bg-gray-900 shadow-md overflow-hidden"
+          >
+            <div className="px-4 py-4 space-y-3">
+              {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-link"
-                  aria-label={link.name}
+                  className="block py-2 text-gray-800 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400"
+                  onClick={() => setIsOpen(false)}
                 >
-                  {link.icon}
+                  {link.name}
                 </a>
               ))}
+              <div className="flex space-x-4 pt-4 border-t dark:border-gray-800">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                    aria-label={link.name}
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github } from 'lucide-react';
 
-// Import images
+// Ecommerce Platform
 import wheelchair from "../../Assets/Images/WheelChair.jpg";
 import ecommerce_ADMMIN from "../../Assets/Images/E_Commerce/admin page.png";
 import ecommerce_HOME from "../../Assets/Images/E_Commerce/Home Page.png";
@@ -12,6 +12,12 @@ import ecommerce_PRD_PAGE from "../../Assets/Images/E_Commerce/PRODUCT PAGE.png"
 import ecommerce_SM_AD from "../../Assets/Images/E_Commerce/seller management - admin.png";
 import ecommerce_SIGNUP from "../../Assets/Images/E_Commerce/Signup Page.png";
 import ecommerce_UM_ADMIN from "../../Assets/Images/E_Commerce/user management - admin.png";
+
+// Evaleation Portal
+import EP_IMG1 from "../../Assets/Images/KPR_Legacy_Awards/image1.jpeg";
+import EP_IMG2 from "../../Assets/Images/KPR_Legacy_Awards/image2.jpeg";
+import EP_IMG3 from "../../Assets/Images/KPR_Legacy_Awards/Image3.png";
+import EP_IMG4 from "../../Assets/Images/KPR_Legacy_Awards/Image4.png";
 
 interface Project {
   id: number;
@@ -68,6 +74,15 @@ const Projects: React.FC = () => {
       image: wheelchair,
       githubLink: 'https://github.com/pranneeth-1511/Smart-Wheel-Chair',
     },
+    {
+      id: 3,
+      title: 'Evaluation Platform',
+      description:
+        'Developed a dynamic web-based evaluation portal for KPR Legacy Awards using AppSheet low-code platform with Google SSO integration. The portal enables seamless data collection, ranking, and visualization for multiple award categories such as Star Alumni, Distinguished Professors, and Rising Stars. Designed custom dashboards for structured data entry and real-time score tracking. Enhanced usability through role-based access and responsive UI.',
+      tags: ['Appsheet', 'Low-code Platform'],
+      image: [EP_IMG1, EP_IMG2, EP_IMG3, EP_IMG4],
+      githubLink: '',
+    },
   ];
 
   const filters = ['All', ...new Set(projects.flatMap(project => project.tags))];
@@ -105,7 +120,7 @@ const Projects: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects & Works</h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Explore my latest work and projects that showcase my skills and expertise in web development and design.

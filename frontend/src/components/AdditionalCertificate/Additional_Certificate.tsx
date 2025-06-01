@@ -53,13 +53,6 @@ const AdditionalCertificates: React.FC = () => {
     },
     {
       id: 3,
-      title: 'HackXelerate-25 TechLead',
-      description:
-        'Selected as the Tech Lead for HackXelerate-25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.',
-      tags: ['EVENT'],
-    },
-    {
-      id: 4,
       title: 'GENIO-2K23',
       description:
         'National Level Technical Symposium - Events Prticipated: CODERS UNITE, TECH SPRINT, CLASH OF LOGOS',
@@ -68,7 +61,7 @@ const AdditionalCertificates: React.FC = () => {
       certLink: AURC_PDF,
     },
     {
-      id: 5,
+      id: 4,
       title: 'ERSMERONZ-24',
       description:
         'National Level Techno Fest - Prezentare-24',
@@ -77,7 +70,7 @@ const AdditionalCertificates: React.FC = () => {
       certLink: BIT_SATHY,
     },
     {
-      id: 6,
+      id: 5,
       title: 'Data Structures & Algorithm',
       description:
         'Workshop conducted by GeeksforGeeks - DATA STRUCTURES & ALGORITHMS',
@@ -87,11 +80,18 @@ const AdditionalCertificates: React.FC = () => {
     },
 
     {
+      id: 6,
+      title: 'HackXelerate-25 TechLead',
+      description:
+        'Selected as the Tech Lead for HackXelerate-25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.',
+      tags: ['EVENT','COORDINATOR'],
+    },
+    {
       id: 7,
       title: 'Hackfest 2024 Coordinator',
       description:
         'Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.',
-      tags: ['EVENT'],
+      tags: ['EVENT','COORDINATOR'],
     },
     {
       id: 8,

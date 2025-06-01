@@ -160,13 +160,13 @@ const Skills: React.FC = () => {
           <h3 className="text-2xl font-bold mb-8">Technologies I Work With</h3>
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              'React',
-              'javaScript',
+              'React.js',
+              'Java Programming',
               'Node.js',
-              'Tailwind CSS',
-              'Supabase',
-              'Java',
-              'Python',
+              'Cloud Deployment',
+              'Cloud Computing',
+              'Networking',
+              'Security',
               'Autodesk Fusion 360',
               'Git & Github',
               'AWS-EC2',

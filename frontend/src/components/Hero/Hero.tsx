@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
           >
             <TypeAnimation
               sequence={[
-                'Frontend Developer',
+                'Frontend Web Developer',
                 1000,
                 'Cloud Computing & DevOps Engineer',
                 1000,
