@@ -52,8 +52,8 @@ const Experience: React.FC = () => {
     {
       id: 3,
       title: 'Bachelor of Technology in Computer Science and Business Systems',
-      company: 'KPR Institute of Engineering and Technology',
-      period: '2022 - 2026',
+      company: 'KPR Institute of Engineering and Technology, Coimbatore',
+      period: '2022 - Present',
       description:'CGPA: 7.1',
       type: 'education',
     },
@@ -62,7 +62,7 @@ const Experience: React.FC = () => {
       title: 'NARAYANA JUNIOR COLLEGE',
       company: 'VIJAYAWADA, ANDHRA PRADESH',
       period: '2022',
-      description:'HSC - 52%',
+      description:'HSC: 64.7% [344/530]',
       type: 'education',
     },
     {
@@ -70,7 +70,7 @@ const Experience: React.FC = () => {
       title: 'NARAYANA EM HS PEDARUPALLI',
       company: 'NELLORE, ANDHRA PRADESH',
       period: '2020',
-      description:"SSLC - 98%",
+      description:"SSLC: 98% [598/600]",
       type: 'education',
     },
   ];
