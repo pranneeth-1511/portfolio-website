@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
                 1000,
                 'Networking & System Administration',
                 1000,
-                'Creative Coder',
+                'Systems Engineer',
                 1000,
               ]}
               wrapper="span"
