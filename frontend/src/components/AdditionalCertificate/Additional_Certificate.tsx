@@ -165,6 +165,8 @@ const AdditionalCertificates: React.FC = () => {
     }),
     menuList: (provided: any) => ({
       ...provided,
+      maxHeight: 225,
+      overflowY: 'auto',
       borderRadius: 16,
       padding: 0,
     }),
@@ -198,14 +200,14 @@ const AdditionalCertificates: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-10"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Event Participation & Volunteering Certificates
           </h2>
         </motion.div>
 
-        <div className="p-6 max-w-xs mx-auto mb-12 text-md text-black dark:text-white">
+        <div className="max-w-xs mx-auto mb-12 text-md text-black dark:text-white">
           <Select
             options={filterOptions}
             onChange={(selectedOption) =>

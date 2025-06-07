@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github } from 'lucide-react';
 import { FiExternalLink } from 'react-icons/fi';
+import Select from 'react-select';
 
-// Ecommerce Platform
+// Images for Ecommerce Platform
 import wheelchair from "../../Assets/Images/WheelChair.jpg";
 import ecommerce_ADMMIN from "../../Assets/Images/E_Commerce/admin page.png";
 import ecommerce_HOME from "../../Assets/Images/E_Commerce/Home Page.png";
@@ -14,7 +15,7 @@ import ecommerce_SM_AD from "../../Assets/Images/E_Commerce/seller management - 
 import ecommerce_SIGNUP from "../../Assets/Images/E_Commerce/Signup Page.png";
 import ecommerce_UM_ADMIN from "../../Assets/Images/E_Commerce/user management - admin.png";
 
-// Evaluation Portal
+// Images for Evaluation Portal
 import EP_IMG1 from "../../Assets/Images/KPR_Legacy_Awards/image1.jpeg";
 import EP_IMG2 from "../../Assets/Images/KPR_Legacy_Awards/image2.jpeg";
 import EP_IMG3 from "../../Assets/Images/KPR_Legacy_Awards/Image3.png";
@@ -34,6 +35,25 @@ const Projects: React.FC = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [activeFilter, setActiveFilter] = useState('All');
   const [imageIndexes, setImageIndexes] = useState<Record<number, number>>({});
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    const getCurrentTheme = () =>
+      document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+
+    setTheme(getCurrentTheme());
+
+    const observer = new MutationObserver(() => {
+      setTheme(getCurrentTheme());
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleNextImage = (projectId: number, imageCount: number) => {
     setImageIndexes((prev) => ({
@@ -91,7 +111,7 @@ const Projects: React.FC = () => {
       id: 3,
       title: 'Evaluation Platform',
       description:
-        'Developed a dynamic web-based evaluation portal for KPR Legacy Awards using AppSheet low-code platform with Google SSO integration. The portal enables seamless data collection, ranking, and visualization for multiple award categories such as Star Alumni, Distinguished Professors, and Rising Stars. Designed custom dashboards for structured data entry and real-time score tracking. Enhanced usability through role-based access and responsive UI.',
+        'Developed a dynamic web-based evaluation portal for KPR Legacy Awards using AppSheet low-code platform with Google SSO integration. The portal enables seamless data collection, ranking, and visualization for multiple award categories.',
       tags: ['Appsheet', 'Low-code Platform'],
       image: [EP_IMG1, EP_IMG2, EP_IMG3, EP_IMG4],
       githubLink: '',
@@ -100,6 +120,7 @@ const Projects: React.FC = () => {
   ];
 
   const filters = ['All', ...new Set(projects.flatMap(project => project.tags))];
+  const filterOptions = filters.map(filter => ({ value: filter, label: filter }));
 
   const filteredProjects =
     activeFilter === 'All'
@@ -123,6 +144,52 @@ const Projects: React.FC = () => {
     },
   };
 
+  const selectStyles = {
+    control: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      borderColor: theme === 'dark' ? '#4b5563' : '#d1d5db',
+      borderRadius: 9999,
+      padding: '2px 4px',
+    }),
+    input: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#fff' : '#000',
+    }),
+    menu: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      borderRadius: 16,
+      marginTop: 4,
+    }),
+
+    menuList: (provided: any) => ({
+      ...provided,
+      maxHeight: 225,
+      overflowY: 'auto',
+      borderRadius: 16,
+      padding: 0,
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isFocused
+        ? theme === 'dark' ? '#374151' : '#f3f4f6'
+        : theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      cursor: 'pointer',
+    }),
+    singleValue: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#fff' : '#000',
+    }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#9ca3af' : '#6b7280',
+    }),
+  };
+
   return (
     <section id="projects" className="section-spacing">
       <div className="container-padding mx-auto">
@@ -132,7 +199,7 @@ const Projects: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects & Works</h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
@@ -141,21 +208,17 @@ const Projects: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
-                activeFilter === filter
-                  ? 'bg-primary-600 text-white shadow-md'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
+        {/* Filter Dropdown */}
+        <div className="max-w-xs mx-auto mb-8 text-md text-black dark:text-white">
+          <Select
+            options={filterOptions}
+            onChange={(selectedOption) => setActiveFilter(selectedOption ? selectedOption.value : 'All')}
+            defaultValue={{ value: 'All', label: 'All' }}
+            isSearchable
+            isClearable
+            placeholder="Filter by Tag..."
+            styles={selectStyles}
+          />
         </div>
 
         {/* Projects Grid */}
@@ -172,72 +235,53 @@ const Projects: React.FC = () => {
               <motion.div
                 key={project.id}
                 variants={itemVariants}
-                className="card overflow-hidden shadow-lg rounded-lg"
+                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform transform hover:-translate-y-1"
               >
-                {/* Image Carousel */}
-                <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
+                <div className="relative">
                   <img
                     src={images[currentIndex]}
-                    alt={`${project.title} screenshot ${currentIndex + 1}`}
-                    className="w-full h-full object-contain transition-transform duration-500 bg-white dark:bg-gray-900"
+                    alt={project.title}
+                    className="w-full h-64 object-cover"
                   />
                   {images.length > 1 && (
                     <>
                       <button
                         onClick={() => handlePrevImage(project.id, images.length)}
-                        aria-label="Previous image"
-                        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full hover:bg-opacity-60"
+                        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white dark:bg-gray-700 bg-opacity-75 dark:bg-opacity-75 text-gray-800 dark:text-white p-2 rounded-full shadow-md"
                       >
                         ‹
                       </button>
                       <button
                         onClick={() => handleNextImage(project.id, images.length)}
-                        aria-label="Next image"
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full hover:bg-opacity-60"
+                        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white dark:bg-gray-700 bg-opacity-75 dark:bg-opacity-75 text-gray-800 dark:text-white p-2 rounded-full shadow-md"
                       >
                         ›
                       </button>
-                      <div className="absolute bottom-2 right-2 text-white text-xs bg-black bg-opacity-50 px-2 py-1 rounded">
-                        {currentIndex + 1} / {images.length}
-                      </div>
                     </>
                   )}
                 </div>
-
-                {/* Project Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, idx) => (
+                    {project.tags.map((tag, index) => (
                       <span
-                        key={idx}
-                        className="px-3 py-1 text-sm bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full"
+                        key={index}
+                        className="bg-primary-100 text-primary-800 dark:bg-primary-800 dark:text-primary-100 text-sm px-2 py-1 rounded-full"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-
                   <div className="flex gap-4">
                     {isValidUrl(project.githubLink) && (
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary-600 hover:text-primary-800 flex items-center gap-1"
-                      >
-                        <Github /> Github
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-6 h-6 text-gray-600 dark:text-gray-300 hover:text-primary-500" />
                       </a>
                     )}
                     {isValidUrl(project.websitelink) && (
-                      <a
-                        href={project.websitelink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary-600 hover:text-primary-800 flex items-center gap-1"
-                      >
-                        <FiExternalLink /> Website
+                      <a href={project.websitelink} target="_blank" rel="noopener noreferrer">
+                        <FiExternalLink className="w-6 h-6 text-gray-600 dark:text-gray-300 hover:text-primary-500" />
                       </a>
                     )}
                   </div>

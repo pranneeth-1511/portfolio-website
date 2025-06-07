@@ -160,7 +160,7 @@ const Certifications: React.FC = () => {
     }),
     input: (provided: any) => ({
     ...provided,
-    color: theme === 'dark' ? '#fff' : '#000',  // This sets the input text color
+    color: theme === 'dark' ? '#fff' : '#000',
   }),
     menu: (provided: any) => ({
       ...provided,
@@ -172,6 +172,8 @@ const Certifications: React.FC = () => {
     }),
     menuList: (provided: any) => ({
       ...provided,
+      maxHeight: 225,
+      overflowY: 'auto',
       borderRadius: 16,
       padding: 0,
     }),
@@ -201,7 +203,7 @@ const Certifications: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications</h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
@@ -210,7 +212,7 @@ const Certifications: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="p-6 max-w-xs mx-auto mb-12 text-md text-black dark:text-black text-white">
+        <div className="max-w-xs mx-auto mb-12 text-md text-black dark:text-black text-white">
           <Select
             options={filterOptions}
             onChange={(selectedOption) => setActiveFilter(selectedOption ? selectedOption.value : 'ALL')}
