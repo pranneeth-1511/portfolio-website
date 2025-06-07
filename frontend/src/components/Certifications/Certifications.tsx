@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiExternalLink } from 'react-icons/fi';
-//PDF Files
+import Select from 'react-select';
+
 import AI_PDF from '../../Assets/PDF/Certificates/course/AI For Everyone.pdf';
 import GITHUB_PDF from '../../Assets/PDF/Certificates/course/GitHub Foundations.pdf';
 import ENGINEERING_GRAPHICS_PDF from '../../Assets/PDF/Certificates/course/Engineering Graphics and Design.pdf';
@@ -11,7 +12,7 @@ import PYTHON_PDF from '../../Assets/PDF/Certificates/course/Python Basics Certi
 import GOOGLE_ANALYTICS_PDF from '../../Assets/PDF/Certificates/course/Google Analytics.pdf';
 import OCI_DFA_PDF from '../../Assets/PDF/Certificates/course/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf';
 import JAVA_BASIC_HR_PDF from '../../Assets/PDF/Certificates/course/java (Basics) - HR.pdf';
-//Image Files
+
 import AI_IMG from "../../Assets/Certificate-Logos-Badges/AI_IMG.jpg";
 import GITHUB_IMG from '../../Assets/Certificate-Logos-Badges/GITHUB.png';
 import ENGINEERING_GRAPHICS_IMG from '../../Assets/Certificate-Logos-Badges/ENGINEERING_GRAPHICS.png';
@@ -19,7 +20,7 @@ import IT_PRIMER_IMG from '../../Assets/Certificate-Logos-Badges/IT_PRIMER.png';
 import PYTHON_IMG from '../../Assets/Certificate-Logos-Badges/PYTHON.png';
 import GOOGLE_ANALYTICS_IMG from '../../Assets/Certificate-Logos-Badges/GOOGLE_ANALYTICS.png';
 import OCI_DFA_IMG from '../../Assets/Certificate-Logos-Badges/OCI_DFA.png';
-import JAVA_BASIC_HR_IMG from '../../Assets/Certificate-Logos-Badges/Java (Basics) - HR.png'
+import JAVA_BASIC_HR_IMG from '../../Assets/Certificate-Logos-Badges/Java (Basics) - HR.png';
 
 interface Certification {
   id: number;
@@ -37,13 +38,30 @@ const Certifications: React.FC = () => {
   });
 
   const [activeFilter, setActiveFilter] = useState('ALL');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  useEffect(() => {
+    const getCurrentTheme = () =>
+      document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+
+    setTheme(getCurrentTheme());
+
+    const observer = new MutationObserver(() => {
+      setTheme(getCurrentTheme());
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const certifications: Certification[] = [
     {
       id: 1,
       title: 'GitHub Foundations',
-      description:
-        'Learned the core functionalities of GitHub including repositories, branching, pull requests, and collaborative development workflows.',
+      description: 'Learned the core functionalities of GitHub including repositories, branching, pull requests, and collaborative development workflows.',
       tags: ['Version Control', 'Software Tools'],
       image: GITHUB_IMG,
       certLink: GITHUB_PDF,
@@ -51,8 +69,7 @@ const Certifications: React.FC = () => {
     {
       id: 2,
       title: 'Engineering Graphics & Design',
-      description:
-        'Gained knowledge in technical drawing, orthographic projections, and CAD tools used for visualizing and designing engineering components.',
+      description: 'Gained knowledge in technical drawing, orthographic projections, and CAD tools used for visualizing and designing engineering components.',
       tags: ['Design'],
       image: ENGINEERING_GRAPHICS_IMG,
       certLink: ENGINEERING_GRAPHICS_PDF,
@@ -60,8 +77,7 @@ const Certifications: React.FC = () => {
     {
       id: 3,
       title: 'IT Primer',
-      description:
-        'Covered the basics of information technology including networking, computer systems, and foundational IT concepts.',
+      description: 'Covered the basics of information technology including networking, computer systems, and foundational IT concepts.',
       tags: ['Information Technology', 'Networking'],
       image: IT_PRIMER_IMG,
       certLink: IT_PRIMER_PDF,
@@ -69,8 +85,7 @@ const Certifications: React.FC = () => {
     {
       id: 4,
       title: 'Python For Beginners',
-      description:
-        'Learned the fundamentals of Python programming including syntax, data structures, functions, and control flow.',
+      description: 'Learned the fundamentals of Python programming including syntax, data structures, functions, and control flow.',
       tags: ['Programming', 'Python'],
       image: PYTHON_IMG,
       certLink: PYTHON_PDF,
@@ -78,8 +93,7 @@ const Certifications: React.FC = () => {
     {
       id: 5,
       title: 'AI For Everyone',
-      description:
-        'An introductory course by Andrew Ng explaining how AI works, its real-world applications, and its societal impact.',
+      description: 'An introductory course by Andrew Ng explaining how AI works, its real-world applications, and its societal impact.',
       tags: ['Artificial Intelligence', 'Information Technology'],
       image: AI_IMG,
       certLink: AI_PDF,
@@ -87,8 +101,7 @@ const Certifications: React.FC = () => {
     {
       id: 6,
       title: 'Google Analytics',
-      description:
-        'Explored website data tracking, user behavior analysis, traffic sources, and reporting using Google Analytics tools.',
+      description: 'Explored website data tracking, user behavior analysis, traffic sources, and reporting using Google Analytics tools.',
       tags: ['Data Analysis', 'Software Tools'],
       image: GOOGLE_ANALYTICS_IMG,
       certLink: GOOGLE_ANALYTICS_PDF,
@@ -96,8 +109,7 @@ const Certifications: React.FC = () => {
     {
       id: 7,
       title: 'OCI Data Foundations Associate 2024',
-      description:
-        'Earned Oracle’s foundational certification covering cloud concepts, data management, and Oracle Cloud Infrastructure services.',
+      description: 'Earned Oracle’s foundational certification covering cloud concepts, data management, and Oracle Cloud Infrastructure services.',
       tags: ['Cloud Computing', 'Data Analysis'],
       image: OCI_DFA_IMG,
       certLink: OCI_DFA_PDF,
@@ -105,15 +117,15 @@ const Certifications: React.FC = () => {
     {
       id: 8,
       title: 'Java (Basic)',
-      description:
-        'HackerRank Java (Basic) Certified: Classes, data structures, inheritance, exception handling, etc.',
-      tags: ['Java','programming'],
+      description: 'HackerRank Java (Basic) Certified: Classes, data structures, inheritance, exception handling, etc.',
+      tags: ['Java', 'Programming'],
       image: JAVA_BASIC_HR_IMG,
       certLink: JAVA_BASIC_HR_PDF,
     },
   ];
 
   const filters = ['ALL', ...new Set(certifications.flatMap(cert => cert.tags))];
+  const filterOptions = filters.map(filter => ({ value: filter, label: filter }));
 
   const filteredCertifications =
     activeFilter === 'ALL'
@@ -124,9 +136,7 @@ const Certifications: React.FC = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -135,10 +145,48 @@ const Certifications: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
+      transition: { duration: 0.5 },
     },
+  };
+
+  const selectStyles = {
+    control: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      borderColor: theme === 'dark' ? '#4b5563' : '#d1d5db',
+      borderRadius: 9999,
+      padding: '2px 4px',
+    }),
+    menu: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      borderRadius: 16,
+      marginTop: 4,
+      overflow: 'hidden',
+    }),
+    menuList: (provided: any) => ({
+      ...provided,
+      borderRadius: 16,
+      padding: 0,
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isFocused
+        ? theme === 'dark' ? '#374151' : '#f3f4f6'
+        : theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      cursor: 'pointer',
+    }),
+    singleValue: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#fff' : '#000',
+    }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#9ca3af' : '#6b7280',
+    }),
   };
 
   return (
@@ -158,20 +206,16 @@ const Certifications: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 rounded-full transition-all duration-300 ${
-                activeFilter === filter
-                  ? 'bg-primary-600 text-white shadow-md'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
+        <div className="p-6 max-w-xs mx-auto mb-12 text-md text-black dark:text-black dark:bg-gray">
+          <Select
+            options={filterOptions}
+            onChange={(selectedOption) => setActiveFilter(selectedOption ? selectedOption.value : 'ALL')}
+            defaultValue={{ value: 'ALL', label: 'ALL' }}
+            isSearchable
+            isClearable
+            placeholder="Filter by Tag..."
+            styles={selectStyles}
+          />
         </div>
 
         <motion.div
@@ -180,7 +224,7 @@ const Certifications: React.FC = () => {
           animate={inView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
         >
-          {filteredCertifications.map((cert) => (
+          {filteredCertifications.map(cert => (
             <motion.div key={cert.id} variants={itemVariants} className="card overflow-hidden">
               <div className="relative w-full overflow-hidden">
                 <img
