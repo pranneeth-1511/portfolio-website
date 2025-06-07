@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github } from 'lucide-react';
+import { FiExternalLink } from 'react-icons/fi';
 
 // Ecommerce Platform
 import wheelchair from "../../Assets/Images/WheelChair.jpg";
@@ -13,7 +14,7 @@ import ecommerce_SM_AD from "../../Assets/Images/E_Commerce/seller management - 
 import ecommerce_SIGNUP from "../../Assets/Images/E_Commerce/Signup Page.png";
 import ecommerce_UM_ADMIN from "../../Assets/Images/E_Commerce/user management - admin.png";
 
-// Evaleation Portal
+// Evaluation Portal
 import EP_IMG1 from "../../Assets/Images/KPR_Legacy_Awards/image1.jpeg";
 import EP_IMG2 from "../../Assets/Images/KPR_Legacy_Awards/image2.jpeg";
 import EP_IMG3 from "../../Assets/Images/KPR_Legacy_Awards/Image3.png";
@@ -26,6 +27,7 @@ interface Project {
   tags: string[];
   image: string | string[];
   githubLink: string;
+  websitelink: string;
 }
 
 const Projects: React.FC = () => {
@@ -47,6 +49,15 @@ const Projects: React.FC = () => {
     }));
   };
 
+  const isValidUrl = (url: string) => {
+    try {
+      const validUrl = new URL(url);
+      return validUrl.protocol === "http:" || validUrl.protocol === "https:";
+    } catch (error) {
+      return false;
+    }
+  };
+
   const projects: Project[] = [
     {
       id: 1,
@@ -64,6 +75,7 @@ const Projects: React.FC = () => {
         ecommerce_UM_ADMIN,
       ],
       githubLink: 'https://github.com/pranneeth-1511/E-commerce-Website',
+      websitelink: 'https://nextcart-dkp.vercel.app/',
     },
     {
       id: 2,
@@ -73,6 +85,7 @@ const Projects: React.FC = () => {
       tags: ['Python', 'Tkinter'],
       image: wheelchair,
       githubLink: 'https://github.com/pranneeth-1511/Smart-Wheel-Chair',
+      websitelink: '',
     },
     {
       id: 3,
@@ -82,6 +95,7 @@ const Projects: React.FC = () => {
       tags: ['Appsheet', 'Low-code Platform'],
       image: [EP_IMG1, EP_IMG2, EP_IMG3, EP_IMG4],
       githubLink: '',
+      websitelink: '',
     },
   ];
 
@@ -204,17 +218,30 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  {project.githubLink && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
-                    >
-                      <Github size={18} className="mr-2" />
-                      Code
-                    </a>
-                  )}
+                  <div className="flex space-x-4">
+                    {project.githubLink && isValidUrl(project.githubLink) && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline mb-2"
+                      >
+                        <Github size={18} className="mr-2" />
+                        Code  
+                      </a>
+                    )}
+                    {project.websitelink && isValidUrl(project.websitelink) && (
+                      <a
+                        href={project.websitelink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
+                      >
+                        <FiExternalLink size={18} className="mr-2" />
+                        Working Preview
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             );
