@@ -97,7 +97,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="section-spacing">
+    <section id="experience" className="section-spacing pb-0">
       <div className="container-padding mx-auto">
         <motion.div
           ref={ref}

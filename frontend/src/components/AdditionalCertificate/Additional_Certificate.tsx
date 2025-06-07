@@ -193,7 +193,7 @@ const AdditionalCertificates: React.FC = () => {
   };
 
   return (
-    <section id="certifications" className="section-spacing">
+    <section id="certifications" className="section-spacing pb-0">
       <div className="container-padding mx-auto">
         <motion.div
           ref={ref}

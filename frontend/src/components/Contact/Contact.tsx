@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="section-spacing bg-gray-50 dark:bg-gray-900/50 min-h-screen flex items-center justify-center"
+      className="section-spacing py-0 bg-gray-50 dark:bg-gray-900/50 min-h-screen flex items-center justify-center"
     >
       <div className="container-padding mx-auto w-full max-w-4xl">
         {/* Top Section */}

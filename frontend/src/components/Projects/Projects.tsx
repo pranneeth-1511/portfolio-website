@@ -191,7 +191,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="section-spacing">
+    <section id="projects" className="section-spacing pb-0">
       <div className="container-padding mx-auto">
         {/* Section Header */}
         <motion.div
