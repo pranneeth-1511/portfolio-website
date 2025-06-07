@@ -147,7 +147,7 @@ const Projects: React.FC = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 rounded-full transition-all duration-300 ${
+              className={`px-4 py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
                 activeFilter === filter
                   ? 'bg-primary-600 text-white shadow-md'
                   : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -163,7 +163,7 @@ const Projects: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredProjects.map((project) => {
             const images = Array.isArray(project.image) ? project.image : [project.image];
@@ -175,11 +175,11 @@ const Projects: React.FC = () => {
                 className="card overflow-hidden shadow-lg rounded-lg"
               >
                 {/* Image Carousel */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
                   <img
                     src={images[currentIndex]}
                     alt={`${project.title} screenshot ${currentIndex + 1}`}
-                    className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                   {images.length > 1 && (
                     <>
@@ -218,27 +218,26 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex space-x-4">
-                    {project.githubLink && isValidUrl(project.githubLink) && (
+
+                  <div className="flex gap-4">
+                    {isValidUrl(project.githubLink) && (
                       <a
                         href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline mb-2"
+                        className="text-primary-600 hover:text-primary-800 flex items-center gap-1"
                       >
-                        <Github size={18} className="mr-2" />
-                        Code  
+                        <Github /> Github
                       </a>
                     )}
-                    {project.websitelink && isValidUrl(project.websitelink) && (
+                    {isValidUrl(project.websitelink) && (
                       <a
                         href={project.websitelink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
+                        className="text-primary-600 hover:text-primary-800 flex items-center gap-1"
                       >
-                        <FiExternalLink size={18} className="mr-2" />
-                        Working Preview
+                        <FiExternalLink /> Website
                       </a>
                     )}
                   </div>
