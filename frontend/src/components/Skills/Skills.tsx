@@ -198,7 +198,7 @@ const Skills: React.FC = () => {
             ].map((tech) => (
               <div
                 key={tech}
-                className="px-6 py-0 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                className="px-4 pt-3 pb-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
               >
                 {tech}
               </div>
