@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiExternalLink } from 'react-icons/fi';
-
+//PDF Files
 import AI_PDF from '../../Assets/PDF/Certificates/course/AI For Everyone.pdf';
 import GITHUB_PDF from '../../Assets/PDF/Certificates/course/GitHub Foundations.pdf';
 import ENGINEERING_GRAPHICS_PDF from '../../Assets/PDF/Certificates/course/Engineering Graphics and Design.pdf';
@@ -10,7 +10,8 @@ import IT_PRIMER_PDF from '../../Assets/PDF/Certificates/course/IT Primer.pdf';
 import PYTHON_PDF from '../../Assets/PDF/Certificates/course/Python Basics Certificate - Udemy.pdf';
 import GOOGLE_ANALYTICS_PDF from '../../Assets/PDF/Certificates/course/Google Analytics.pdf';
 import OCI_DFA_PDF from '../../Assets/PDF/Certificates/course/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf';
-
+import JAVA_BASIC_HR_PDF from '../../Assets/PDF/Certificates/course/java (Basics) - HR.pdf';
+//Image Files
 import AI_IMG from "../../Assets/Certificate-Logos-Badges/AI_IMG.jpg";
 import GITHUB_IMG from '../../Assets/Certificate-Logos-Badges/GITHUB.png';
 import ENGINEERING_GRAPHICS_IMG from '../../Assets/Certificate-Logos-Badges/ENGINEERING_GRAPHICS.png';
@@ -18,6 +19,7 @@ import IT_PRIMER_IMG from '../../Assets/Certificate-Logos-Badges/IT_PRIMER.png';
 import PYTHON_IMG from '../../Assets/Certificate-Logos-Badges/PYTHON.png';
 import GOOGLE_ANALYTICS_IMG from '../../Assets/Certificate-Logos-Badges/GOOGLE_ANALYTICS.png';
 import OCI_DFA_IMG from '../../Assets/Certificate-Logos-Badges/OCI_DFA.png';
+import JAVA_BASIC_HR_IMG from '../../Assets/Certificate-Logos-Badges/Java (Basics) - HR.png'
 
 interface Certification {
   id: number;
@@ -34,7 +36,6 @@ const Certifications: React.FC = () => {
     threshold: 0.1,
   });
 
-  // 🔧 Ensure 'ALL' is the default selected filter
   const [activeFilter, setActiveFilter] = useState('ALL');
 
   const certifications: Certification[] = [
@@ -70,7 +71,7 @@ const Certifications: React.FC = () => {
       title: 'Python For Beginners',
       description:
         'Learned the fundamentals of Python programming including syntax, data structures, functions, and control flow.',
-      tags: ['Programming', 'Software Tools'],
+      tags: ['Programming', 'Python'],
       image: PYTHON_IMG,
       certLink: PYTHON_PDF,
     },
@@ -100,6 +101,15 @@ const Certifications: React.FC = () => {
       tags: ['Cloud Computing', 'Data Analysis'],
       image: OCI_DFA_IMG,
       certLink: OCI_DFA_PDF,
+    },
+    {
+      id: 8,
+      title: 'Java (Basic)',
+      description:
+        'HackerRank Java (Basic) Certified: Classes, data structures, inheritance, exception handling, etc.',
+      tags: ['Java','programming'],
+      image: JAVA_BASIC_HR_IMG,
+      certLink: JAVA_BASIC_HR_PDF,
     },
   ];
 
