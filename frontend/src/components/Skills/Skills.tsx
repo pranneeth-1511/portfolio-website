@@ -25,6 +25,7 @@ const Skills: React.FC = () => {
   const backendSkills: Skill[] = [
     { name: 'Node.js', level: 30, color: 'bg-primary-500' },
     { name: 'Supabase', level: 20, color: 'bg-secondary-500' },
+    { name: 'CI/CD Pipelines', level: 40, color: 'bg-accent-500' },
   ];
 
   const programming_skills: Skill[] = [
@@ -42,7 +43,6 @@ const Skills: React.FC = () => {
   const Additional_skills: Skill[] = [
     { name: 'Appsheet Platform', level:45 , color: 'bg-primary-500' },
     { name: 'Git & Github', level: 60, color: 'bg-secondary-500' },
-    { name: 'CI/CD Pipelines', level: 30, color: 'bg-accent-500' },
   ];
 
   const containerVariants = {
