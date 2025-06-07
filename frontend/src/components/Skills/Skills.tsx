@@ -18,7 +18,7 @@ const Skills: React.FC = () => {
     { name: 'TypeScript', level: 80, color: 'bg-primary-500' },
     { name: 'Tailwind CSS', level: 70, color: 'bg-secondary-600' },
     { name: 'React', level: 60, color: 'bg-accent-500' },
-    { name: 'HTML & CSS', level: 30, color: 'bg-secondary-600' },
+    { name: 'HTML & CSS', level: 30, color: 'bg-primary-500' },
     { name: 'JavaScript', level: 30, color: 'bg-secondary-500' },    
   ];
 
@@ -27,14 +27,22 @@ const Skills: React.FC = () => {
     { name: 'Supabase', level: 20, color: 'bg-secondary-500' },
   ];
 
-  const technicalSkills: Skill[] = [
-    { name: 'Java', level: 80, color: 'bg-primary-500' },
+  const programming_skills: Skill[] = [
+    { name: 'Java (Beginner)', level: 80, color: 'bg-primary-500' },
     { name: 'Python', level: 60, color: 'bg-secondary-500' },
   ];
 
-  const otherSkills: Skill[] = [
-    { name: 'Appsheet Platform', level: 45, color: 'bg-primary-500' },
-    { name: 'Amazon EC2', level: 20, color: 'bg-secondary-500' },
+  const AWS_Deploy: Skill[] = [
+    { name: 'Amazon EC2', level: 50, color: 'bg-primary-500' },
+    { name: 'Amazon IAM', level: 90, color: 'bg-secondary-500' },
+    { name: 'Amazon S3', level: 30, color: 'bg-accent-500' },
+    { name: 'Amazon RDS', level: 70, color: 'bg-primary-500' },    
+  ];
+
+  const Additional_skills: Skill[] = [
+    { name: 'Appsheet Platform', level:45 , color: 'bg-primary-500' },
+    { name: 'Git & Github', level: 60, color: 'bg-secondary-500' },
+    { name: 'CI/CD Pipelines', level: 30, color: 'bg-accent-500' },
   ];
 
   const containerVariants = {
@@ -129,9 +137,9 @@ const Skills: React.FC = () => {
             className="card p-6 lg:col-span-1 md:col-span-2"
           >
             <h3 className="text-xl font-bold mb-6 text-center text-accent-600 dark:text-accent-400">
-              Technical Skills
+              Programing / Coding
             </h3>
-            {technicalSkills.map((skill) => (
+            {programming_skills.map((skill) => (
               <SkillBar key={skill.name} skill={skill} />
             ))}
           </motion.div>
@@ -143,9 +151,23 @@ const Skills: React.FC = () => {
             className="card p-6 lg:col-span-1 md:col-span-2"
           >
             <h3 className="text-xl font-bold mb-6 text-center text-accent-600 dark:text-accent-400">
-              Other Skills
+              AWS Services
             </h3>
-            {otherSkills.map((skill) => (
+            {AWS_Deploy.map((skill) => (
+              <SkillBar key={skill.name} skill={skill} />
+            ))}
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            className="card p-6 lg:col-span-1 md:col-span-2"
+          >
+            <h3 className="text-xl font-bold mb-6 text-center text-accent-600 dark:text-accent-400">
+              Additional Skills
+            </h3>
+            {Additional_skills.map((skill) => (
               <SkillBar key={skill.name} skill={skill} />
             ))}
           </motion.div>
@@ -169,7 +191,7 @@ const Skills: React.FC = () => {
               'Security',
               'Autodesk Fusion 360',
               'Git & Github',
-              'AWS-EC2',
+              'AWS Services (EC2,S3,RDS,IAM)',
               'CI/CD Pipelines',
               'Unix/Linux Environment',
               'Appsheet (Low-code Platform)',

@@ -37,7 +37,7 @@ const AdditionalCertificates: React.FC = () => {
       id: 1,
       title: 'Rural Immersion Program - NSS',
       description:
-        'Received Certificate for active participation in Rural Immersion Program 2024 at Kaduvettipalayam Village (Oct 18,2024 - Oct 29,2024). Made active contribution towards community outreach, cultural exchange, and rural development activities.',
+        "Received Certificate for being a part in RIP'24 at Kaduvettipalayam Village. Made active contribution towards community outreach, cultural exchange, and rural development activities.",
       tags: ['NSS'],
       image: RIP_NSS_IMG,
       certLink: RIP_NSS,
@@ -47,7 +47,7 @@ const AdditionalCertificates: React.FC = () => {
       title: 'TechfusionX Coordinator',
       description:
         'Received Certificate of Coordination by Capabl for the 2-day Coding Saksham Program 2024, handling logistics, team coordination, and coordinating industry-led sessions at KPR Institute of Engineering and Technology.',
-      tags: ['EVENT'],
+      tags: ['COORDINATOR'],
       image: TECHFUSIONX_IMG,
       certLink: TECHFUSIONX_PDF,
     },
@@ -56,7 +56,7 @@ const AdditionalCertificates: React.FC = () => {
       title: 'GENIO-2K23',
       description:
         'National Level Technical Symposium - Events Prticipated: CODERS UNITE, TECH SPRINT, CLASH OF LOGOS',
-      tags: ['EVENT'],
+      tags: ['TECHNICAL'],
       image: AURC_IMG,
       certLink: AURC_PDF,
     },
@@ -65,7 +65,7 @@ const AdditionalCertificates: React.FC = () => {
       title: 'ERSMERONZ-24',
       description:
         'National Level Techno Fest - Prezentare-24',
-      tags: ['EVENT'],
+      tags: ['TECHNICAL', 'PAPER PRESENTATION'],
       image: BIT_SATHY_IMG,
       certLink: BIT_SATHY,
     },
@@ -74,7 +74,7 @@ const AdditionalCertificates: React.FC = () => {
       title: 'Data Structures & Algorithm',
       description:
         'Workshop conducted by GeeksforGeeks - DATA STRUCTURES & ALGORITHMS',
-      tags: ['WORKSHOP','EVENT'],
+      tags: ['WORKSHOP'],
       image: NIT_DS_IMG,
       certLink: NIT_DS,
     },
@@ -83,15 +83,15 @@ const AdditionalCertificates: React.FC = () => {
       id: 6,
       title: 'HackXelerate-25 TechLead',
       description:
-        'Selected as the Tech Lead for HackXelerate-25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.',
-      tags: ['EVENT','COORDINATOR'],
+        "Selected as the Tech Lead for HackXelerate'25, tasked with managing technical operations, guiding participants, and ensuring the successful conduct of the hackathon.",
+      tags: ['COORDINATOR'],
     },
     {
       id: 7,
-      title: 'Hackfest 2024 Coordinator',
+      title: "Hackfest'24 Coordinator",
       description:
-        'Associated with SAP (2024) Successfully coordinated Hackfest 2024, ensuring smooth execution and team collaboration.',
-      tags: ['EVENT','COORDINATOR'],
+        "Associated with SAP Successfully coordinated Hackfest'24, ensuring smooth execution and team collaboration.",
+      tags: ['COORDINATOR'],
     },
     {
       id: 8,
