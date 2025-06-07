@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Select from 'react-select';
 import { FiExternalLink } from 'react-icons/fi';
 
 import TECHFUSIONX_PDF from '../../Assets/PDF/Certificates/Event/Capabl Hackathon.pdf';
 import RIP_NSS from '../../Assets/PDF/Certificates/Event/RIP_2K24 NSS.pdf';
-import AURC_PDF from '../../Assets/PDF/Certificates/Event/Anna University regional Campus_CBE.pdf'
+import AURC_PDF from '../../Assets/PDF/Certificates/Event/Anna University regional Campus_CBE.pdf';
 import BIT_SATHY from '../../Assets/PDF/Certificates/Event/BIT - Sathyamangalam.pdf';
 import NIT_DS from '../../Assets/PDF/Certificates/Event/Workshop NIT (Data structure & Algorithms).pdf';
 
 import TECHFUSIONX_IMG from '../../Assets/Certificate-Logos-Badges/Capabl Hackathon.png';
 import RIP_NSS_IMG from '../../Assets/Certificate-Logos-Badges/RIP_2K24 NSS.png';
-import AURC_IMG from '../../Assets/Certificate-Logos-Badges/Anna University regional Campus_CBE.png'
+import AURC_IMG from '../../Assets/Certificate-Logos-Badges/Anna University regional Campus_CBE.png';
 import BIT_SATHY_IMG from '../../Assets/Certificate-Logos-Badges/BIT - Sathyamangalam.png';
 import NIT_DS_IMG from '../../Assets/Certificate-Logos-Badges/Workshop NIT (Data structure & Algorithms).png';
 
@@ -30,7 +31,24 @@ const AdditionalCertificates: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [activeTag, setActiveTag] = useState<string>('ALL');
+  const [theme, setTheme] = useState<'light' | 'dark'>(() =>
+    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const [activeFilter, setActiveFilter] = useState<string>('ALL');
 
   const additionalCertificates: AdditionalCertificate[] = [
     {
@@ -55,7 +73,7 @@ const AdditionalCertificates: React.FC = () => {
       id: 3,
       title: 'GENIO-2K23',
       description:
-        'National Level Technical Symposium - Events Prticipated: CODERS UNITE, TECH SPRINT, CLASH OF LOGOS',
+        'National Level Technical Symposium - Events Participated: CODERS UNITE, TECH SPRINT, CLASH OF LOGOS',
       tags: ['TECHNICAL'],
       image: AURC_IMG,
       certLink: AURC_PDF,
@@ -63,8 +81,7 @@ const AdditionalCertificates: React.FC = () => {
     {
       id: 4,
       title: 'ERSMERONZ-24',
-      description:
-        'National Level Techno Fest - Prezentare-24',
+      description: 'National Level Techno Fest - Prezentare-24',
       tags: ['TECHNICAL', 'PAPER PRESENTATION'],
       image: BIT_SATHY_IMG,
       certLink: BIT_SATHY,
@@ -72,13 +89,11 @@ const AdditionalCertificates: React.FC = () => {
     {
       id: 5,
       title: 'Data Structures & Algorithm',
-      description:
-        'Workshop conducted by GeeksforGeeks - DATA STRUCTURES & ALGORITHMS',
+      description: 'Workshop conducted by GeeksforGeeks - DATA STRUCTURES & ALGORITHMS',
       tags: ['WORKSHOP'],
       image: NIT_DS_IMG,
       certLink: NIT_DS,
     },
-
     {
       id: 6,
       title: 'HackXelerate-25 TechLead',
@@ -102,12 +117,13 @@ const AdditionalCertificates: React.FC = () => {
     },
   ];
 
-  const allTags = ['ALL', ...new Set(additionalCertificates.flatMap(cert => cert.tags))];
+  const filters = ['ALL', ...Array.from(new Set(additionalCertificates.flatMap(cert => cert.tags)))];
+  const filterOptions = filters.map(filter => ({ value: filter, label: filter }));
 
   const filteredCertificates =
-    activeTag === 'ALL'
+    activeFilter === 'ALL'
       ? additionalCertificates
-      : additionalCertificates.filter(cert => cert.tags.includes(activeTag));
+      : additionalCertificates.filter(cert => cert.tags.includes(activeFilter));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -126,6 +142,54 @@ const AdditionalCertificates: React.FC = () => {
     },
   };
 
+  const selectStyles = {
+    control: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      borderColor: theme === 'dark' ? '#4b5563' : '#d1d5db',
+      borderRadius: 9999,
+      padding: '2px 4px',
+    }),
+    input: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#fff' : '#000',
+    }),
+    menu: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      borderRadius: 16,
+      marginTop: 4,
+      overflow: 'hidden',
+    }),
+    menuList: (provided: any) => ({
+      ...provided,
+      borderRadius: 16,
+      padding: 0,
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isFocused
+        ? theme === 'dark'
+          ? '#374151'
+          : '#f3f4f6'
+        : theme === 'dark'
+        ? '#1f2937'
+        : '#ffffff',
+      color: theme === 'dark' ? '#fff' : '#000',
+      cursor: 'pointer',
+    }),
+    singleValue: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#fff' : '#000',
+    }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      color: theme === 'dark' ? '#9ca3af' : '#6b7280',
+    }),
+  };
+
   return (
     <section id="certifications" className="section-spacing">
       <div className="container-padding mx-auto">
@@ -141,28 +205,25 @@ const AdditionalCertificates: React.FC = () => {
           </h2>
         </motion.div>
 
-        {/* Tag Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {allTags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => setActiveTag(tag)}
-              className={`px-4 py-2 rounded-full text-sm font-medium border ${
-                activeTag === tag
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
-              }`}
-            >
-              {tag}
-            </button>
-          ))}
+        <div className="p-6 max-w-xs mx-auto mb-12 text-md text-black dark:text-white">
+          <Select
+            options={filterOptions}
+            onChange={(selectedOption) =>
+              setActiveFilter(selectedOption ? selectedOption.value : 'ALL')
+            }
+            defaultValue={{ value: 'ALL', label: 'ALL' }}
+            isSearchable
+            isClearable
+            placeholder="Filter by Tag..."
+            styles={selectStyles}
+          />
         </div>
 
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
         >
           {filteredCertificates.map((cert) => (
             <motion.div key={cert.id} variants={itemVariants} className="card overflow-hidden">

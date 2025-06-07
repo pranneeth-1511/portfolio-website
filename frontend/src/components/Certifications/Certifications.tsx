@@ -158,6 +158,10 @@ const Certifications: React.FC = () => {
       borderRadius: 9999,
       padding: '2px 4px',
     }),
+    input: (provided: any) => ({
+    ...provided,
+    color: theme === 'dark' ? '#fff' : '#000',  // This sets the input text color
+  }),
     menu: (provided: any) => ({
       ...provided,
       backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
@@ -206,7 +210,7 @@ const Certifications: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="p-6 max-w-xs mx-auto mb-12 text-md text-black dark:text-black dark:bg-gray">
+        <div className="p-6 max-w-xs mx-auto mb-12 text-md text-black dark:text-black text-white">
           <Select
             options={filterOptions}
             onChange={(selectedOption) => setActiveFilter(selectedOption ? selectedOption.value : 'ALL')}
