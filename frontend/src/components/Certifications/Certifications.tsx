@@ -256,7 +256,6 @@ const Certifications: React.FC = () => {
                   <a
                     href={cert.certLink}
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
                   >
                     <FiExternalLink size={16} />

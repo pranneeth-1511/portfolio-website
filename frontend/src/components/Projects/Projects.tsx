@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github } from 'lucide-react';
+import { Github, GithubIcon } from 'lucide-react';
 import { FiExternalLink } from 'react-icons/fi';
 import Select from 'react-select';
 
@@ -275,13 +275,17 @@ const Projects: React.FC = () => {
                   </div>
                   <div className="flex gap-4">
                     {isValidUrl(project.githubLink) && (
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-6 h-6 text-gray-600 dark:text-gray-300 hover:text-primary-500" />
+                      <a href={project.githubLink} target="_blank"
+                        className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
+                      > 
+                      <GithubIcon size={16} /> <span>Code</span>
                       </a>
                     )}
                     {isValidUrl(project.websitelink) && (
-                      <a href={project.websitelink} target="_blank" rel="noopener noreferrer">
-                        <FiExternalLink className="w-6 h-6 text-gray-600 dark:text-gray-300 hover:text-primary-500" />
+                      <a href={project.websitelink} target="_blank"
+                        className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:underline"
+                      >
+                        <FiExternalLink size={16} /> <span>Preview</span>
                       </a>
                     )}
                   </div>
