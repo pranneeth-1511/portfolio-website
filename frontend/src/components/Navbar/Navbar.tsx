@@ -33,7 +33,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const socialLinks = [
     { name: 'GitHub', icon: <GithubIcon size={20} />, href: 'https://github.com/pranneeth-1511' },
     { name: 'LinkedIn', icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/pranneethdk' },
-    { name: 'Instagram', icon: <Instagram size={20} />, href: 'https://www.instagram.com/pranneeth_1511/' },
   ];
 
   return (
@@ -47,12 +46,10 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <a href="#home" className="text-2xl font-bold gradient-text">
             Pranneeth D K
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="nav-link">
@@ -61,7 +58,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             ))}
           </nav>
 
-          {/* Desktop Social Icons & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((link) => (
               <a
@@ -83,8 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           </div>
-
-          {/* Mobile Buttons: Theme Toggle & Menu */}
+          
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={toggleTheme}
@@ -103,8 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
+      
       <AnimatePresence>
         {isOpen && (
           <motion.div
