@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { MapPin, Mail, Phone, Github, Linkedin, Instagram } from 'lucide-react';
+import { TwitterIcon, MapPin, Mail, Phone, Github, Linkedin, Instagram } from 'lucide-react';
 import hackerrank from '../../Assets/icons/hackerrank.png';
 import leetcode from '../../Assets/icons/leetcode.png';
 
@@ -36,6 +36,7 @@ const Contact: React.FC = () => {
     { platform: 'GitHub', icon: <Github size={20} />, url: 'https://github.com/pranneeth-1511' },
     { platform: 'LinkedIn', icon: <Linkedin size={20} />, url: 'https://www.linkedin.com/in/pranneethdk' },
     { platform: 'Instagram', icon: <Instagram size={20} />, url: 'https://www.instagram.com/pranneeth_1511/' },
+    { platform: 'x.com(formerly Twitter)', icon: <TwitterIcon size={20} />, url: 'https://x.com/pranneeth_1511' },
     {
       platform: 'LeetCode',
       icon: <img src={leetcode} alt="LeetCode" className="w-5 h-5" />,

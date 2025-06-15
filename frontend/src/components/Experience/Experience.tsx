@@ -39,14 +39,7 @@ const Experience: React.FC = () => {
       title: 'Internship',
       company: 'Codsoft, West Bengal',
       period: 'Jan 2024 - Feb 2024',
-      description: (
-      <>
-        <p> <b>Responsibilities:</b> </p>
-        <p> <b>Task 1:</b> Use the Titanic dataset to create a model that predicts survival rates for Titanic passengers.</p>
-        <p> <b>Task 2:</b> Create a model to classify iris flowers into species based on sepal and petal measurements using the iris dataset.</p>
-        <p> <b>Task 3:</b> Develop a machine learning model for detecting fraudulent credit card transactions.</p>
-      </>
-      ),
+      description: 'Remote Internship on Data Science using python.',
       type: 'work',
     },
     {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiExternalLink } from 'react-icons/fi';
@@ -12,6 +12,7 @@ import PYTHON_PDF from '../../Assets/PDF/Certificates/course/Python Basics Certi
 import GOOGLE_ANALYTICS_PDF from '../../Assets/PDF/Certificates/course/Google Analytics.pdf';
 import OCI_DFA_PDF from '../../Assets/PDF/Certificates/course/Oracle Cloud Infrastructure 2024 Data Foundations Associate.pdf';
 import JAVA_BASIC_HR_PDF from '../../Assets/PDF/Certificates/course/java (Basics) - HR.pdf';
+import INTERNSHIP_PDF from "../../Assets/PDF/Certificates/course/Codsoft Internship.pdf";
 
 import AI_IMG from "../../Assets/Certificate-Logos-Badges/AI_IMG.jpg";
 import GITHUB_IMG from '../../Assets/Certificate-Logos-Badges/GITHUB.png';
@@ -21,11 +22,12 @@ import PYTHON_IMG from '../../Assets/Certificate-Logos-Badges/PYTHON.png';
 import GOOGLE_ANALYTICS_IMG from '../../Assets/Certificate-Logos-Badges/GOOGLE_ANALYTICS.png';
 import OCI_DFA_IMG from '../../Assets/Certificate-Logos-Badges/OCI_DFA.png';
 import JAVA_BASIC_HR_IMG from '../../Assets/Certificate-Logos-Badges/Java (Basics) - HR.png';
+import INTERNSHIP_IMG from '../../Assets/Certificate-Logos-Badges/Codsoft Internship.jpg';
 
 interface Certification {
   id: number;
   title: string;
-  description: string;
+  description: ReactNode;
   issue_date: string;
   expiry_date: string;
   tags: string[];
@@ -139,6 +141,23 @@ const Certifications: React.FC = () => {
       tags: ['Java', 'Hacker Rank'],
       image: JAVA_BASIC_HR_IMG,
       certLink: JAVA_BASIC_HR_PDF,
+    },
+    {
+      id: 9,
+      title: 'Internship',
+      description:  (
+      <>
+        <p><strong>Responsibilities:</strong></p>
+        <li>Assisted in organizing technical events, workshops, and hackathons for student engagement.</li>
+        <li>Collaborated with peers to promote innovation and knowledge-sharing in engineering and technology.</li>
+        <li>Contributed to IEEE initiatives aimed at professional development and community building.</li>
+      </>
+      ),
+      issue_date:'',
+      expiry_date: '',
+      tags: ['Internship'],
+      image: INTERNSHIP_IMG,
+      certLink: INTERNSHIP_PDF,
     },
   ];
 
