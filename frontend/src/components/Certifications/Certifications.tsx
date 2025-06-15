@@ -26,6 +26,8 @@ interface Certification {
   id: number;
   title: string;
   description: string;
+  issue_date: string;
+  expiry_date: string;
   tags: string[];
   image: string;
   certLink?: string;
@@ -62,7 +64,9 @@ const Certifications: React.FC = () => {
       id: 1,
       title: 'GitHub Foundations',
       description: 'Learned the core functionalities of GitHub including repositories, branching, pull requests, and collaborative development workflows.',
-      tags: ['Version Control', 'Software Tools'],
+      issue_date: 'JAN 06, 2025',
+      expiry_date: 'JAN 06, 2028',
+      tags: ['Version Control', 'GitHub'],
       image: GITHUB_IMG,
       certLink: GITHUB_PDF,
     },
@@ -70,7 +74,9 @@ const Certifications: React.FC = () => {
       id: 2,
       title: 'Engineering Graphics & Design',
       description: 'Gained knowledge in technical drawing, orthographic projections, and CAD tools used for visualizing and designing engineering components.',
-      tags: ['Design'],
+      issue_date: '',
+      expiry_date: '',
+      tags: ['Design','L&T EduTech'],
       image: ENGINEERING_GRAPHICS_IMG,
       certLink: ENGINEERING_GRAPHICS_PDF,
     },
@@ -78,7 +84,9 @@ const Certifications: React.FC = () => {
       id: 3,
       title: 'IT Primer',
       description: 'Covered the basics of information technology including networking, computer systems, and foundational IT concepts.',
-      tags: ['Information Technology', 'Networking'],
+      issue_date: '',
+      expiry_date: '',
+      tags: ['Networking','L&T EduTech'],
       image: IT_PRIMER_IMG,
       certLink: IT_PRIMER_PDF,
     },
@@ -86,7 +94,9 @@ const Certifications: React.FC = () => {
       id: 4,
       title: 'Python For Beginners',
       description: 'Learned the fundamentals of Python programming including syntax, data structures, functions, and control flow.',
-      tags: ['Programming', 'Python'],
+      issue_date: 'OCT 01, 2022',
+      expiry_date: '',
+      tags: ['Python', 'Udemy'],
       image: PYTHON_IMG,
       certLink: PYTHON_PDF,
     },
@@ -94,7 +104,9 @@ const Certifications: React.FC = () => {
       id: 5,
       title: 'AI For Everyone',
       description: 'An introductory course by Andrew Ng explaining how AI works, its real-world applications, and its societal impact.',
-      tags: ['Artificial Intelligence', 'Information Technology'],
+      issue_date: 'JUN 06, 2023',
+      expiry_date: '',
+      tags: ['AI', 'Coursera'],
       image: AI_IMG,
       certLink: AI_PDF,
     },
@@ -102,7 +114,9 @@ const Certifications: React.FC = () => {
       id: 6,
       title: 'Google Analytics',
       description: 'Explored website data tracking, user behavior analysis, traffic sources, and reporting using Google Analytics tools.',
-      tags: ['Data Analysis', 'Software Tools'],
+      issue_date: ' March 06, 2025',
+      expiry_date: ' March 06, 2026',
+      tags: ['Data Analysis'],
       image: GOOGLE_ANALYTICS_IMG,
       certLink: GOOGLE_ANALYTICS_PDF,
     },
@@ -110,7 +124,9 @@ const Certifications: React.FC = () => {
       id: 7,
       title: 'OCI Data Foundations Associate 2024',
       description: 'Earned Oracle’s foundational certification covering cloud concepts, data management, and Oracle Cloud Infrastructure services.',
-      tags: ['Cloud Computing', 'Data Analysis'],
+      issue_date: 'MARCH 10, 2025',
+      expiry_date: 'MARCH 10,2027',
+      tags: ['Cloud Computing', 'Data Analysis', 'Oracle'],
       image: OCI_DFA_IMG,
       certLink: OCI_DFA_PDF,
     },
@@ -118,7 +134,9 @@ const Certifications: React.FC = () => {
       id: 8,
       title: 'Java (Basic)',
       description: 'HackerRank Java (Basic) Certified: Classes, data structures, inheritance, exception handling, etc.',
-      tags: ['Java', 'Programming'],
+      issue_date: 'JUN 07, 2025',
+      expiry_date: '',
+      tags: ['Java', 'Hacker Rank'],
       image: JAVA_BASIC_HR_IMG,
       certLink: JAVA_BASIC_HR_PDF,
     },
@@ -242,6 +260,13 @@ const Certifications: React.FC = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{cert.description}</p>
+                {(cert.issue_date || cert.expiry_date) && (
+                  <div className="text-gray-600 dark:text-gray-400 mb-4">
+                    {cert.issue_date && <p><strong>Issued on:</strong> {cert.issue_date}</p>}
+                    {cert.expiry_date && <p><strong>Expires on:</strong> {cert.expiry_date}</p>}
+                  </div>
+                )}
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {cert.tags.map((tag, index) => (
                     <span
