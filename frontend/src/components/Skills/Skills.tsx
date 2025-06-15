@@ -195,6 +195,7 @@ const Skills: React.FC = () => {
               'CI/CD Pipelines',
               'Unix/Linux Environment',
               'Appsheet (Low-code Platform)',
+              'MongoDB',
             ].map((tech) => (
               <div
                 key={tech}
