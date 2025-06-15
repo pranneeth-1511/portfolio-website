@@ -13,7 +13,6 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Scroll background logic
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
@@ -98,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           </div>
         </div>
       </div>
-      
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
